@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+      "baseUrl": "../app/",
+        "paths": {
+            "modules": [
+                "modules"
+            ],
+        },
+        "allowSyntheticDefaultImports": true,
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "sourceMap": true,
+        "target": "es2015",
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "include": [
+        "app/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+        "**/*.spec.js"
+    ],
+    "globals": {
+      "require": true,
+    },
+    "compileOnSave": false,
+    "atom": {
+      "rewriteTsconfig": false
+    }
+}
