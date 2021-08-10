@@ -57,7 +57,7 @@ module.exports = {
     },
     stats: {
         children: true,
-        logging: 'verbose',
+        // logging: 'verbose',
         colors: true,
         reasons: true
     }

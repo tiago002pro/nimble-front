@@ -1,0 +1,13 @@
+<div class="area-input"> 
+    <form class="area-form">
+        <h3>Criar Conta Corrente</h3>
+        <input type="number" ng-click="$ctrl.busca()" class="form-control" placeholder="ID" ng-model="$ctrl.cliente" >
+        <button class="btn btn-primary" ui-sref="app.conta-list()" ng-click="$ctrl.addContaCC($ctrl.cliente)">Criar Conta</button>
+    </form>
+    
+    <form class="area-form">
+        <h3>Criar Conta Poupança</h3>
+        <input type="number" class="form-control" placeholder="ID" ng-model="$ctrl.cliente">
+        <button class="btn btn-primary" ui-sref="app.conta-list()" ng-click="$ctrl.addContaCP($ctrl.cliente)">Criar Conta</button>
+    </form>
+</div>

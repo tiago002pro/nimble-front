@@ -1,0 +1,19 @@
+
+<div class="area-input"> 
+    <form class="area-form">
+        <h3>Cadastro Pessoa Física</h3>
+        <input type="text" class="form-control" placeholder="Nome" ng-model="$ctrl.cliente.nome">
+        <input type="text" class="form-control" placeholder="Endereço" ng-model="$ctrl.cliente.endereco">
+        <input type="text" class="form-control" placeholder="CPF" ng-model="$ctrl.cliente.cpf">
+        <input type="text" class="form-control" placeholder="RG" ng-model="$ctrl.cliente.rg">
+        <button class="btn btn-primary" ui-sref="app.clientePF-list()" ng-click="$ctrl.addClientePF($ctrl.cliente)">Cadastrar</button>
+    </form>
+    
+    <form class="area-form">
+        <h3>Cadastro Pessoa Juridica</h3>
+        <input type="text" class="form-control" placeholder="Nome" ng-model="$ctrl.cliente.nome">
+        <input type="text" class="form-control" placeholder="Endereço" ng-model="$ctrl.cliente.endereco">
+        <input type="text" class="form-control" placeholder="CNPJ" ng-model="$ctrl.cliente.cnpj">
+        <button class="btn btn-primary" ui-sref="app.clientePJ-list()" ng-click="$ctrl.addClientePJ($ctrl.cliente)">Cadastrar</button>
+    </form>
+</div>

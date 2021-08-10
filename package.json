@@ -1,6 +1,6 @@
 {
   "name": "Nimble",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "TCC",
   "scripts": {
     "dev": "webpack-dev-server --config app/config/webpack.config.dev.js --content-base dist"
@@ -26,8 +26,6 @@
   "dependencies": {
     "@uirouter/angularjs": "^1.0.29",
     "angular": "^1.8.2",
-    "angular-input-masks": "^4.4.1",
-    "angular-ui-mask": "^1.8.7",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "moment": "^2.29.1",
