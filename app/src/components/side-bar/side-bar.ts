@@ -2,7 +2,6 @@ import './side-bar.scss'
 import template from './side-bar.html'
 
 class SidebarController {
-    private testeclick: boolean = false
     private hide:boolean
     constructor (
         public $scope,
@@ -11,11 +10,9 @@ class SidebarController {
     ) {}
 
     $onInit() {
-        console.log("hideSideBar", this.hide);
     }
 
     hide_menu(){
-        console.log("hideSideBar", this.hide);        
         this.hide = !this.hide
     }
 }

@@ -7,8 +7,6 @@ class BaseController {
 
     $onInit() {
         this.hide = false
-        console.log("Base hide", this.hide);
-        
     }
 }
 

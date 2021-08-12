@@ -7,7 +7,6 @@ import './modules'
 
 import './app.module.scss'
 import { base } from './components/base/base'
-import { footer } from './components/footer/footer'
 import { sideBar } from './components/side-bar/side-bar'
 
 angular.module('app', [
@@ -20,7 +19,6 @@ angular.module('app', [
 ])
 .component('base', base)
 .component('sidebar', sideBar)
-.component('footer', footer)
 .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $stateProvider
     .state('app', {
