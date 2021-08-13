@@ -1,8 +1,8 @@
 import * as angular from 'angular'
 import './clientePF-list.scss'
 import template from '../clientePF-list/clientePF-list.html'
-import { ClientePFListController } from '../clientePF-list/clientePF-list'
-import { ClienteService } from  '../services/cliente.service'
+import { ClientePFListController } from './clientePF-list'
+import { ClienteService } from  '../../services/cliente.service'
 
 const clientePFListModule = angular
     .module('clientePF.list', [])

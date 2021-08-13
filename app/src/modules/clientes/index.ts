@@ -1,7 +1,7 @@
 import * as angular from 'angular'
 import { clienteFormModule } from './cliente-form'
 import { ClienteService } from  './services/cliente.service'
-import { clientePFListModule } from './clientePF-list'
+import { clientePFListModule } from './cliente-form/clientePF-list'
 import { clientePJListModule } from './clientePJ-list'
 
 const clienteModule = angular
