@@ -1,8 +1,9 @@
 <!-- <div>
     <img src="https://observatoriodocinema.uol.com.br/wp-content/uploads/2020/07/7.jpg" alt="">
 </div> -->
-
-<div>
-    <h1>Home</h1>
-    <column-frame></column-frame>
+<div class="home">
+    <h1>{{ $ctrl.title }}</h1>
+    <div class="frame" ng-repeat="column in $ctrl.columns">
+        <column-frame column="column"></column-frame>
+    </div>
 </div>
