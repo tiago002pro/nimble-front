@@ -21,6 +21,34 @@
       <span class="tooltip">Dashboard</span>
     </li>
     <li>
+      <a href="#" ng-click="$ctrl.dropDowMenu()">
+        <i class='bx bx-plus-circle'></i>
+        <span class="links_name">Cadastros</span>
+        <!-- <i class='bx bx-down-arrow' ></i> -->
+      </a>
+      <span class="tooltip">Cadastros</span>
+      <div ng-class="$ctrl.showdropDowMenu == false ? 'sidebar dropMenu' : 'sidebar dropMenu down' ">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="links_name">Cliente</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="links_name">Fornecedor</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="links_name">Funcionário</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    
+    <li>
       <a href="#">
         <i class='bx bx-user' ></i>
         <span class="links_name">User</span>

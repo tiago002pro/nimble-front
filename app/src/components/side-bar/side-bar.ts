@@ -2,7 +2,9 @@ import './side-bar.scss'
 import template from './side-bar.html'
 
 class SidebarController {
-    private hide:boolean
+    private hide: boolean
+    private showdropDowMenu: boolean
+
     constructor (
         public $scope,
         public $rootScope,
@@ -10,10 +12,22 @@ class SidebarController {
     ) {}
 
     $onInit() {
+        this.showdropDowMenu = false
     }
 
     hide_menu(){
         this.hide = !this.hide
+        if(this.hide) {
+            this.showdropDowMenu = false;
+        }
+    }
+
+    dropDowMenu() {
+        this.showdropDowMenu = !this.showdropDowMenu
+        if (this.hide) {
+            this.hide = false
+        }
+        
     }
 }
 
