@@ -1,9 +1,12 @@
 <div>
     <div class="column">
-        <!-- <h3>{{ $ctrl.column }}</h3> -->
-        <h3>ID: {{ $ctrl.column.id }}</h3>
-        <h3>Título: {{ $ctrl.column.title }}</h3>
-        <!-- <h3>{{ $ctrl.column.card }}</h3> -->
+        <div class="title">{{ $ctrl.column.title }}</div>
         <card-frame ng-repeat=" card in $ctrl.column.card" card=card></card-frame>
+        <a href="#">
+            <div class="bottom-column">
+                <i class='bx bx-plus'></i>
+                Adicionar novo cartão
+            </div>
+        </a>
     </div>
 </div>
