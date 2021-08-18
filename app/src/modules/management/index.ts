@@ -1,19 +1,19 @@
 import * as angular from 'angular'
-import homeTemplate from './home/home.html'
-import HomeController from './home/home'
-import { columnFrame } from './home/components/column-frame/column-frame'
-import { cardFrame } from './home/components/card-frame/card-frame'
+import template from './kanban-board/kanban-board.html'
+import KanbanBoardController from './kanban-board/kanban-board'
+import { listCards } from './kanban-board/components/list-cards/list-cards'
+import { card } from './kanban-board/components/cards/card'
 
 const managementModule = angular
 .module('app.management', [])
-.component('columnFrame', columnFrame)
-.component('cardFrame', cardFrame)
+.component('listCards', listCards)
+.component('card', card)
 .config(['$stateProvider', ($stateProvider) => {
     $stateProvider
     .state('app.home', {
         url: '/',
-        templateUrl: homeTemplate,
-        controller: HomeController,
+        templateUrl: template,
+        controller: KanbanBoardController,
         controllerAs: '$ctrl'
     })
 }])

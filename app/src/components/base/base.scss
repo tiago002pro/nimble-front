@@ -8,15 +8,31 @@
 }
 body {
   position: relative;
-  min-height: 100vh;
+  // min-height: 100vh;
   width: 100%;
-  overflow: hidden;
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #1d1b31;
+}
+::-webkit-scrollbar-corner {
+  // background-color: red;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #6c63c4;
 }
 .base_content {
     position: relative;
     height: 100%;
     display: flex;
-    // background-color: #3b3939;
     width: calc(100% -78px);
     left: 240px;
     transition: all 0.5s ease;

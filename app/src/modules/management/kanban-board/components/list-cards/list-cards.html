@@ -1,0 +1,14 @@
+<div class="list">
+    <div class="title">{{ $ctrl.column.title }}</div>
+    <div class="list-cards">
+        <card ng-repeat=" card in $ctrl.column.card" card=card ></card>
+    </div>
+    <div>
+        <a href="#">
+            <div class="bottom-column">
+                <i class='bx bx-plus'></i>
+                <span>Adicionar novo cartão</span>
+            </div>
+        </a>
+    </div>
+</div>
