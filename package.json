@@ -27,6 +27,7 @@
     "@uirouter/angularjs": "^1.0.29",
     "angular": "^1.8.2",
     "bootstrap": "^4.6.0",
+    "firebase": "^8.9.1",
     "jquery": "^3.6.0",
     "moment": "^2.29.1",
     "moment-random": "^1.1.0",
