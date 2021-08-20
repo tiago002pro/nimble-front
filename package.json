@@ -24,6 +24,7 @@
     "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
+    "@angular/cdk": "^12.2.2",
     "@uirouter/angularjs": "^1.0.29",
     "angular": "^1.8.2",
     "bootstrap": "^4.6.0",
