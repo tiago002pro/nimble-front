@@ -1,12 +1,14 @@
 <div ng-class="$ctrl.hide == false ? 'sidebar active' : 'sidebar'">
 <!-- <div class="sidebar.active" id="teste"> -->
   <div class="logo_content">
-    <div class="logo">
-      <i class='bx bxl-flutter' ></i>
-      <div class="logo_name">Nimble</div>
-    </div>
-    <i class='bx bx-menu' id="btn" ng-click="$ctrl.hide_menu()" ></i>
-  </div>
+    <a ui-sref="app.home()">
+      <div class="logo">
+        <i class='bx bxl-flutter' ></i>
+        <div class="logo_name">Nimble</div>
+      </div>
+      <i class='bx bx-menu' id="btn" ng-click="$ctrl.hide_menu()" ></i>
+      </div>
+    </a>
   <ul class="nav_list">
     <li>
         <i class='bx bx-search' ng-click="$ctrl.hide_menu()" ></i>
@@ -14,11 +16,11 @@
       <span class="tooltip">Search</span>
     </li>
     <li>
-      <a href="#">
+      <a ui-sref="app.kanban">
         <i class='bx bx-grid-alt' ></i>
-        <span class="links_name">Dashboard</span>
+        <span class="links_name">Quadro Kanban</span>
       </a>
-      <span class="tooltip">Dashboard</span>
+      <span class="tooltip">Quadro Kanban</span>
     </li>
     <li>
       <a href="#" ng-click="$ctrl.dropDowMenu()">

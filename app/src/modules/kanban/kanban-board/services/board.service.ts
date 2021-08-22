@@ -1,4 +1,4 @@
-class ListCardService {
+class BoardService {
     private url: String = 'http://localhost:8080/api/ListCards'
     constructor(
         public $http,
@@ -13,8 +13,8 @@ class ListCardService {
     }
 }
 
-ListCardService['$inject'] = [
+BoardService['$inject'] = [
     '$http'
 ]
 
-export { ListCardService }
+export { BoardService }

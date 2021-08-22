@@ -3,6 +3,7 @@ import template from './card.html'
 
 class CardController {
     private card: String
+    
     constructor () {}
 
     $onInit() {

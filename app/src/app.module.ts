@@ -11,6 +11,7 @@ angular.module('app', [
     'ui.bootstrap',
     'ui.router',
     'app.management',
+    'app.kanban',
 ])
 .component('base', base)
 .component('sidebar', sideBar)
