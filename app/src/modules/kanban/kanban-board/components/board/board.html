@@ -1,4 +1,4 @@
-<div class="list">
+<!-- <div class="list">
     <div class="title">{{ $ctrl.column.title }}</div>
     <div class="list-cards">
         <card ng-repeat=" card in $ctrl.column.cards" card=card ></card>
@@ -10,5 +10,14 @@
                 <span>Adicionar novo cartão</span>
             </div>
         </a>
+    </div>
+</div> -->
+
+<div class="boards">
+    <div class="board">
+        <h5>{{ $ctrl.column.title }}</h5>
+        <div class="dropzone">
+            <card ng-repeat=" card in $ctrl.column.cards" card=card ></card>
+        </div>
     </div>
 </div>

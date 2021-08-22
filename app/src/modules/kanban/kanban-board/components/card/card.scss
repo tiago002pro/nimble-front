@@ -1,7 +1,51 @@
-.card {
-    width: auto;
-    height: auto;
-    color: #000;
-    padding: 5px 5px 5px 5px;
-    margin: 5px 5px 15px 5px;
+// .card {
+//     width: auto;
+//     height: auto;
+//     color: #000;
+//     padding: 5px 5px 5px 5px;
+//     margin: 5px 5px 15px 5px;
+// }
+
+.cards {
+    padding: 16px;
+    box-shadow: 0 2px 2px -1px #FD951Fcc;
+    width: 250px;
+    // margin: 25px 0;
+    margin: 0px 10px 10px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-style: 18px;
+    background: #1A1A1C;
+    color: #FFF;
+}
+.status {
+    width: 30px;
+    height: 8px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background: #FFF;
+}
+.green {
+    background: #23d2aC;
+}
+.blue {
+    background: #33adff;
+}
+.red {
+    background: red;
+}
+.hightlight {
+    background-color: #FD951F08;
+}
+
+.cards, .dropzone {
+    transition: 400ms;
+}
+
+.is-dragging {
+    cursor: move;
+    opacity: 0.3;
+}
+.over {
+    background-color: #4cd13711;
 }

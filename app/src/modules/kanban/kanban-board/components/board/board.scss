@@ -1,55 +1,77 @@
-.list {
-    max-height: 96vh;
-    height: auto;
-    padding: 5px 5px 5px 5px;
-    margin: 5px 5px 5px 5px;
-    border-radius: 5px;
-    background-color: #1d1b31;
-    color: #FFF;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.list-cards {
-    width: 300px;
-    max-height: 96vh;
-    height: auto;
-    overflow-y: scroll;
-}
-.list a {
-    text-decoration: none;
-    color: #FFF;
-}
-.list a:hover {
-    text-decoration: none;
-}
-.title {
-    margin-left: 10px;
-    margin-bottom: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform:uppercase ;
-    height: 30px;
-    min-height: 30px;
-}
-.bottom-column {
-    text-align: center;
-    border-radius: 5px;
-    height: 30px;
-    min-height: 30px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.bottom-column i {
-    font-size: 20px;
-}
-.bottom-column span {
-}
-.bottom-column:hover {
-    background-color: #3d386d;
-    text-decoration: none;
-    color: #FFF;
-}
+// .list {
+//     max-height: 96vh;
+//     height: auto;
+//     padding: 5px 5px 5px 5px;
+//     margin: 5px 5px 5px 5px;
+//     border-radius: 5px;
+//     background-color: #1d1b31;
+//     color: #FFF;
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+// }
+// .list-cards {
+//     width: 300px;
+//     max-height: 96vh;
+//     height: auto;
+//     overflow-y: scroll;
+// }
+// .list a {
+//     text-decoration: none;
+//     color: #FFF;
+// }
+// .list a:hover {
+//     text-decoration: none;
+// }
+// .title {
+//     margin-left: 10px;
+//     margin-bottom: 5px;
+//     font-size: 18px;
+//     font-weight: bold;
+//     text-transform:uppercase ;
+//     height: 30px;
+//     min-height: 30px;
+// }
+// .bottom-column {
+//     text-align: center;
+//     border-radius: 5px;
+//     height: 30px;
+//     min-height: 30px;
+//     display: flex;
+//     justify-content: center;
+//     position: relative;
+// }
+// .bottom-column i {
+//     font-size: 20px;
+// }
+// .bottom-column span {
+// }
+// .bottom-column:hover {
+//     background-color: #3d386d;
+//     text-decoration: none;
+//     color: #FFF;
+// }
 
-  
+
+.boards {
+    display: flex;
+    margin-top: 20px;
+    height: auto;
+}
+.board {
+    background: #141316;
+    border: 1px solid #FD951F11;
+    border-radius: 4px;
+    margin:  0 10px;
+}
+.board h5 {
+    // padding: 10px;
+    padding: 10px 10px 10px 20px;
+    margin: 0;
+    color: #FD951Fcc;
+}
+.dropzone {
+    padding: 10px;
+    min-width: 282px;
+    min-height: 200px;
+} 

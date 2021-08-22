@@ -1,4 +1,10 @@
-<div class="card">
+<!-- <div class="card">
     <h3>{{$ctrl.card.title}}</h3>
     <h5>{{$ctrl.card.description}}</h5>
+</div> -->
+
+<div class="cards">
+    <div class="status $ctrl.card.status"></div>
+    {{$ctrl.card.status }}
+    <div class="content">{{$ctrl.card.title}}</div>
 </div>
