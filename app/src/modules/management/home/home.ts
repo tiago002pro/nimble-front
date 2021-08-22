@@ -1,6 +1,5 @@
 import './home.scss'
 
-
 class HomeController { 
   
   constructor() {}
@@ -9,7 +8,6 @@ class HomeController {
   }
 }
 
-HomeController['$inject'] = [
-]
+HomeController['$inject'] = []
 
 export { HomeController }

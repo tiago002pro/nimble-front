@@ -12,6 +12,7 @@ angular.module('app', [
     'ui.router',
     'app.management',
     'app.kanban',
+    'app.person',
 ])
 .component('base', base)
 .component('sidebar', sideBar)
