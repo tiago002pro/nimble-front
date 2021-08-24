@@ -15,8 +15,12 @@ body {
   overflow-y: hidden;
   scroll-behavior: smooth;
 
-  // background-color: #130f0d;
+  background-color: #130f0d;
   // color: #fff;
+
+  display: flex;
+  padding: 50px 50px 50px 50px;
+
 }
 html {
   font-family: 'Nunito Sans', sans-serif;

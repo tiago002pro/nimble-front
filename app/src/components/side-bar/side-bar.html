@@ -23,13 +23,13 @@
       <span class="tooltip">Quadro Kanban</span>
     </li>
     <li>
-      <a href="#" ng-click="$ctrl.dropDowMenu()">
+      <a ui-sref="app.person-form()" ng-click="$ctrl.dropDowMenu()">
         <i class='bx bx-plus-circle'></i>
         <span class="links_name">Cadastros</span>
         <!-- <i class='bx bx-down-arrow' ></i> -->
       </a>
       <span class="tooltip">Cadastros</span>
-      <div ng-class="$ctrl.showdropDowMenu == false ? 'sidebar dropMenu' : 'sidebar dropMenu down' ">
+      <!-- <div ng-class="$ctrl.showdropDowMenu == false ? 'sidebar dropMenu' : 'sidebar dropMenu down' ">
         <ul>
           <li>
             <a href="#">
@@ -47,7 +47,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </li>
     
     <li>
