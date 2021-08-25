@@ -1,115 +1,117 @@
-<div ng-class="$ctrl.hide == false ? 'sidebar active' : 'sidebar'">
-<!-- <div class="sidebar.active" id="teste"> -->
-  <div class="logo_content">
-    <a ui-sref="app.home()">
-      <div class="logo">
-        <i class='bx bxl-flutter' ></i>
-        <div class="logo_name">Nimble</div>
-      </div>
-      <i class='bx bx-menu' id="btn" ng-click="$ctrl.hide_menu()" ></i>
-      </div>
-    </a>
-  <ul class="nav_list">
-    <li>
-        <i class='bx bx-search' ng-click="$ctrl.hide_menu()" ></i>
-        <input type="text" placeholder="Search...">
-      <span class="tooltip">Search</span>
-    </li>
-    <li>
-      <a ui-sref="app.kanban">
-        <i class='bx bx-grid-alt' ></i>
-        <span class="links_name">Quadro Kanban</span>
-      </a>
-      <span class="tooltip">Quadro Kanban</span>
-    </li>
-    <li>
-      <a ui-sref="app.person-form()" ng-click="$ctrl.dropDowMenu()">
-        <i class='bx bx-plus-circle'></i>
-        <span class="links_name">Cadastros</span>
-        <!-- <i class='bx bx-down-arrow' ></i> -->
-      </a>
-      <span class="tooltip">Cadastros</span>
-      <!-- <div ng-class="$ctrl.showdropDowMenu == false ? 'sidebar dropMenu' : 'sidebar dropMenu down' ">
-        <ul>
-          <li>
-            <a href="#">
-              <span class="links_name">Cliente</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="links_name">Fornecedor</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="links_name">Funcionário</span>
-            </a>
-          </li>
-        </ul>
-      </div> -->
-    </li>
-    
-    <li>
-      <a href="#">
-        <i class='bx bx-user' ></i>
-        <span class="links_name">User</span>
-      </a>
-      <span class="tooltip">User</span>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-chat' ></i>
-        <span class="links_name">Messages</span>
-      </a>
-      <span class="tooltip">Messages</span>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-pie-chart-alt-2' ></i>
-        <span class="links_name">Analytics</span>
-      </a>
-      <span class="tooltip">Analytics</span>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-folder' ></i>
-        <span class="links_name">File Manager</span>
-      </a>
-      <span class="tooltip">Files</span>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-cart' ></i>
-        <span class="links_name">Order</span>
-      </a>
-      <span class="tooltip">Order</span>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-heart' ></i>
-        <span class="links_name">Saved</span>
-      </a>
-      <span class="tooltip">Saved</span>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-cog' ></i>
-        <span class="links_name">Settings</span>
-      </a>
-      <span class="tooltip">Settings</span>
-    </li>
-  </ul>
-  <div class="profile_content">
-    <div class="profile">
-      <div class="profile_details">
-        <img src="https://firebasestorage.googleapis.com/v0/b/nimble-dcb73.appspot.com/o/brooklyn_nine_nine1.jpg_399056758.jpg?alt=media&token=7d192c2b-7c31-4937-8b1b-a5abfc7becb0" alt="">
-        <div class="name_job">
-          <div class="name">Jake Peralta</div>
-          <div class="job">Detetive</div>
+<div class="side-bar">
+  <div ng-class="$ctrl.hide == false ? 'sidebar active' : 'sidebar'">
+  <!-- <div class="sidebar.active" id="teste"> -->
+    <div class="logo_content">
+      <a ui-sref="app.home()">
+        <div class="logo">
+          <i class='bx bxl-flutter' ></i>
+          <div class="logo_name">Nimble</div>
         </div>
+        <i class='bx bx-menu' id="btn" ng-click="$ctrl.hide_menu()" ></i>
+        </div>
+      </a>
+    <ul class="nav_list">
+      <li>
+          <i class='bx bx-search' ng-click="$ctrl.hide_menu()" ></i>
+          <input type="text" placeholder="Search...">
+        <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a ui-sref="app.kanban">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="links_name">Quadro Kanban</span>
+        </a>
+        <span class="tooltip">Quadro Kanban</span>
+      </li>
+      <li>
+        <a ui-sref="app.person-form()" ng-click="$ctrl.dropDowMenu()">
+          <i class='bx bx-plus-circle'></i>
+          <span class="links_name">Cadastros</span>
+          <!-- <i class='bx bx-down-arrow' ></i> -->
+        </a>
+        <span class="tooltip">Cadastros</span>
+        <!-- <div ng-class="$ctrl.showdropDowMenu == false ? 'sidebar dropMenu' : 'sidebar dropMenu down' ">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="links_name">Cliente</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="links_name">Fornecedor</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="links_name">Funcionário</span>
+              </a>
+            </li>
+          </ul>
+        </div> -->
+      </li>
+      
+      <li>
+        <a href="#">
+          <i class='bx bx-user' ></i>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-chat' ></i>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-folder' ></i>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cart' ></i>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-heart' ></i>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="links_name">Settings</span>
+        </a>
+        <span class="tooltip">Settings</span>
+      </li>
+    </ul>
+    <!-- <div class="profile_content">
+      <div class="profile">
+        <div class="profile_details">
+          <img src="https://firebasestorage.googleapis.com/v0/b/nimble-dcb73.appspot.com/o/brooklyn_nine_nine1.jpg_399056758.jpg?alt=media&token=7d192c2b-7c31-4937-8b1b-a5abfc7becb0" alt="">
+          <div class="name_job">
+            <div class="name">Jake Peralta</div>
+            <div class="job">Detetive</div>
+          </div>
+        </div>
+        <i class='bx bx-log-out' id="log_out" ></i>
       </div>
-      <i class='bx bx-log-out' id="log_out" ></i>
-    </div>
+    </div> -->
   </div>
 </div>

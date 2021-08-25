@@ -6,6 +6,7 @@ import './modules'
 import './app.module.scss'
 import { base } from './components/base/base'
 import { sideBar } from './components/side-bar/side-bar'
+import { navBar } from './components/nav-bar/nav-bar'
 
 angular.module('app', [
     'ui.bootstrap',
@@ -16,6 +17,7 @@ angular.module('app', [
 ])
 .component('base', base)
 .component('sidebar', sideBar)
+.component('navbar', navBar)
 .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $stateProvider
     .state('app', {

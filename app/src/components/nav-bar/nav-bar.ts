@@ -2,7 +2,6 @@ import './nav-bar.scss'
 import template from './nav-bar.html'
 
 class NavbarController {
-    private hide:boolean
     constructor (
     ) {}
 
@@ -12,7 +11,6 @@ class NavbarController {
 
 const navBar = {
     bindings: {
-        hide: '=?'
     },
     controller: NavbarController,
     controllerAs: '$ctrl',

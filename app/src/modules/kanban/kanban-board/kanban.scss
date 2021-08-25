@@ -1,10 +1,43 @@
-.home {
+.kanban-frame {
+    width: 100vw;
+    height: 100vh;
     padding: 10px 10px 10px 10px;
     display: inline-flex;
-    background-color: #c6c5d1;
-    height: 100vh;
+    background-color: #15037e;
     color: #000 !important;
-}
-.frame {
-    display: inline-flex;
+    .frame {
+        display: inline-flex;
+    }
+
+    .boards {
+        height: 40px;
+        margin-top: 20px;
+        display: flex;
+    }
+    .board {
+        margin:  0 10px;
+        border-radius: 3px;
+        background: rgba(129, 129, 129, 0.199);
+        border: 1px solid #FD951F11;
+    }
+    .new-board a {
+        width: 260px;
+        height: 40px;
+        padding-left: 10px;
+        line-height: 40px;
+        display: flex;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #FFF;
+    }
+    .new-board i {
+        line-height: 40px;
+        font-size: 20px;
+    }
+    .new-board:hover {
+        text-decoration: none;
+        background-color: rgba(146, 146, 146, 0.356);
+        color: #131313;
+    }
 }
