@@ -4,19 +4,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // font-family: "Poppins", sans-serif;
 }
 body {
   position: relative;
-  min-height: 100vh;
   width: 100%;
   height: 100vh;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   background-color: #f5f5f5;
   display: flex;
-  // padding: 50px 50px 50px 50px;
 }
 html {
   font-family: 'Nunito Sans', sans-serif;
@@ -36,14 +33,14 @@ html {
   background: #6c63c4;
 }
 .base_content {
-    position: relative;
-    height: 100%;
-    display: flex;
-    width: calc(100% -78px);
-    left: 240px;
-    transition: all 0.5s ease;
+  width: calc(100% -78px);
+  height: 100%;
+  left: 240px;
+  position: relative;
+  display: flex;
+  transition: all 0.5s ease;
   }
-  .base_active {
-    width: calc(100% - 78px);
-    left: 78px;
-  }
+.base_active {
+  width: calc(100% - 78px);
+  left: 78px;
+}

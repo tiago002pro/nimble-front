@@ -12,15 +12,15 @@
     }
     .text-area {
         height: 30px;
-        padding: 10px 10px 10px 20px;
-        margin: 0;
         font-weight: 600;
         color: #131313;
+        margin: 10px;
+        padding-left: 10px;
+        line-height: 30px;
     }
     .dropzone {
-        // padding: 10px;
-        // min-width: 282px;
-        // min-height: 200px;
+        overflow-y: auto;
+        max-height: 77vh;
     } 
     .new-card a {
         text-decoration: none;

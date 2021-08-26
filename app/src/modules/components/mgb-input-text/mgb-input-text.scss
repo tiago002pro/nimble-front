@@ -1,17 +1,19 @@
 .label {
     margin-left: 15px;
-    background-color: #FFF;
     padding-left: 4px;
     padding-right: 4px;
+    background-color: #FFF;
 }
 .label-float{
-    position: relative;
     padding-top: 5px;
     padding-bottom: 5px;
+    position: relative;
 }
 .label-float input{
-    border: 0;
+    height: 50px;
+    padding-left: 15px;
     border: 1px solid #000;
+    border-radius: 5px;
     outline: none;
     min-width: 400px;
     font-size: 17px;
@@ -19,9 +21,6 @@
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
     -webkit-appearance:none;
-    border-radius: 5px;
-    height: 50px;
-    padding-left: 15px;
 }
 .label-float input:focus{
     border-bottom: 2px solid #3951b2;
@@ -31,11 +30,11 @@
     color:transparent;
 }
 .label-float label{
-    pointer-events: none;
-    position: absolute;
     top: 0;
     left: 0;
     margin-top: 18px;
+    position: absolute;
+    pointer-events: none;
     transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
@@ -51,7 +50,7 @@
 }
 .label-float input:focus + label,
 .label-float input:not(:placeholder-shown) + label{
-    font-size: 14px;
     margin-top: -5px;
+    font-size: 14px;
     color: #3951b2;
 }
