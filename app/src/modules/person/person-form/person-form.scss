@@ -1,9 +1,8 @@
 .person-form {
     .board-form {
-        width: 1200px;
-        height: 900px;
-        margin-left: 100px;
-        background-color: #d0e7ff;
+        // width: 80vw;
+        // height: 100vh;
+        // background-color: #d0e7ff;
     }
     .board-title {
         background-color: #d0e7ff;
@@ -24,18 +23,15 @@
         background-color: #FFF;
     }
     .board-content {
-        width: 1150px;
-        height: 780px;
-        margin: auto;
+        width: 40vw;
+        height: 80vh;
+        margin: 50px 10px 50px 400px;
         background-color: #FFF;
         border-radius: 10px;
         padding: 40px;
-
-
     }
     .data-nasc {
         display: flex;
         width: 50px;
     }
-    
 }
