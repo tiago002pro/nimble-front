@@ -1,5 +1,5 @@
 import './modal-card.scss'
-import template from './modal-card.html'
+import templateModal from './modal-card.html'
 
 class ModalCardController {
     constructor () {}
@@ -13,10 +13,10 @@ const modalCard = {
     bindings: {
     },
     controller: ModalCardController,
-    templateUrl: template
+    templateUrl: templateModal
 }
 
 ModalCardController['inject'] = []
 
-export { modalCard }
+export { ModalCardController, templateModal }
 

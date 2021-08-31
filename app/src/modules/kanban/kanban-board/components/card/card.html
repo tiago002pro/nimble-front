@@ -1,6 +1,7 @@
 <div class="kanban-cards">
-    <div class="cards">
-        <div class="status red"></div>
-        <div class="content">{{$ctrl.card.title}}</div>
-    </div>
+    <div class="cards" ng-click="$ctrl.openModal($ctrl.card)">
+        <div ng-click="$ctrl.open()"><h5>click</h5></div>
+            <div class="status red"></div>
+            <div class="content">{{$ctrl.card.title}}</div>
+        </div>
 </div>
