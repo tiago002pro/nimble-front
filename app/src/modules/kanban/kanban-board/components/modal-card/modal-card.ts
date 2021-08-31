@@ -5,6 +5,7 @@ class ModalCardController {
     constructor () {}
 
     $onInit() {
+        console.log("Modal");
         
     }
 }
@@ -18,5 +19,5 @@ const modalCard = {
 
 ModalCardController['inject'] = []
 
-export { ModalCardController, templateModal }
+export { ModalCardController, templateModal, modalCard }
 

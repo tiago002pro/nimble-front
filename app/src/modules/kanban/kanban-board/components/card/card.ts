@@ -17,9 +17,7 @@ class CardController {
         
     }
 
-    open() {
-      this.boardService.openCardModal()
-    }
+
 }
 
 const card = {

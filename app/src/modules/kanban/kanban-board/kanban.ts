@@ -1,3 +1,4 @@
+import { ModalCardController, templateModal } from './components/modal-card/modal-card'
 import './kanban.scss'
 import { BoardService } from './services/board.service'
 
@@ -7,7 +8,8 @@ class KanbanBoardController {
 
   
   constructor(
-    public boardService: BoardService
+    public boardService: BoardService,
+    public $uibModal
   ) {}
   
   $onInit() {
@@ -25,10 +27,13 @@ class KanbanBoardController {
     ]
     // this.columns = await this.boardService.getListCard().then((resp) => resp.data)
   }
+
+
 }
 
 KanbanBoardController['$inject'] = [
-  'boardService'
+  'boardService',
+  '$uibModal'
 ]
 
 export { KanbanBoardController }
