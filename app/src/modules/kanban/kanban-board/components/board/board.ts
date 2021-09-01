@@ -16,25 +16,17 @@ class BoardController {
         this.cards = this.column.cards
     }
 
-    open() {
-        console.log("OPEN");
-        try {
-            console.log("foi");
-            
-            const modalInstance = this.$uibModal.open({
-                templateUrl: templateModal,
-                controller: ModalCardController,
-                controllerAs: '$ctrl',
-                resolve: {}
-              })
-              return modalInstance.result
-        } catch(e) {
-            console.log("error", e);
-            
-            
-        }
-
-      }
+    open(card) {
+        const modalInstance = this.$uibModal.open({
+            templateUrl: templateModal,
+            controller: ModalCardController,
+            controllerAs: '$ctrl',
+            resolve: {
+                card: () => card
+            }
+        })
+        return modalInstance.result
+    }
 }
 
 const board = {

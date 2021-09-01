@@ -2,7 +2,9 @@ import './modal-card.scss'
 import templateModal from './modal-card.html'
 
 class ModalCardController {
-    constructor () {}
+    constructor (
+        public card,
+    ) {}
 
     $onInit() {
         console.log("Modal");
@@ -17,7 +19,9 @@ const modalCard = {
     templateUrl: templateModal
 }
 
-ModalCardController['inject'] = []
+ModalCardController['inject'] = [
+    'card'
+]
 
-export { ModalCardController, templateModal, modalCard }
+export { ModalCardController, templateModal }
 
