@@ -1,21 +1,17 @@
 .kanban-frame {
+    background: url("https://images8.alphacoders.com/105/1054256.jpg");
+    background-size: 1920px;
     .frame-zone {
         width: auto;
         height: 100vh;
         padding: 10px 10px 10px 10px;
         display: inline-flex;
-        // background-color: #15037e;
-        background: url("https://images8.alphacoders.com/105/1054256.jpg");
         background-size: contain;
         color: #000 !important;
-        // overflow-y: auto;
-        // max-width: 2000px;
-
+        // backdrop-filter: blur(20px);
     }
     .frame {
-        // background-color: aqua;
         overflow-x: auto;
-
     }
     .boards {
         height: 40px;

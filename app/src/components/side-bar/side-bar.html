@@ -1,15 +1,12 @@
-<div class="side-bar">
+<!-- <div class="side-bar">
   <div ng-class="$ctrl.hide == false ? 'sidebar active' : 'sidebar'">
-  <!-- <div class="sidebar.active" id="teste"> -->
     <div class="logo_content">
-      <!-- <a ui-sref="app.home()"> -->
         <div class="logo">
           <i class='bx bxl-flutter' ></i>
           <div class="logo_name">Nimble</div>
         </div>
         <i class='bx bx-menu' id="btn" ng-click="$ctrl.hide_menu()" ></i>
         </div>
-      <!-- </a> -->
     <ul class="nav_list">
       <li>
           <i class='bx bx-search' ng-click="$ctrl.hide_menu()" ></i>
@@ -27,10 +24,9 @@
         <a ui-sref="app.person-form()" ng-click="$ctrl.dropDowMenu()">
           <i class='bx bx-plus-circle'></i>
           <span class="links_name">Cadastros</span>
-          <!-- <i class='bx bx-down-arrow' ></i> -->
         </a>
         <span class="tooltip">Cadastros</span>
-        <!-- <div ng-class="$ctrl.showdropDowMenu == false ? 'sidebar dropMenu' : 'sidebar dropMenu down' ">
+        <div ng-class="$ctrl.showdropDowMenu == false ? 'sidebar dropMenu' : 'sidebar dropMenu down' ">
           <ul>
             <li>
               <a href="#">
@@ -48,7 +44,7 @@
               </a>
             </li>
           </ul>
-        </div> -->
+        </div>
       </li>
       
       <li>
@@ -101,7 +97,7 @@
         <span class="tooltip">Settings</span>
       </li>
     </ul>
-    <!-- <div class="profile_content">
+    <div class="profile_content">
       <div class="profile">
         <div class="profile_details">
           <img src="https://firebasestorage.googleapis.com/v0/b/nimble-dcb73.appspot.com/o/brooklyn_nine_nine1.jpg_399056758.jpg?alt=media&token=7d192c2b-7c31-4937-8b1b-a5abfc7becb0" alt="">
@@ -112,6 +108,90 @@
         </div>
         <i class='bx bx-log-out' id="log_out" ></i>
       </div>
-    </div> -->
+    </div>
   </div>
+</div> -->
+
+
+<!-- Wrapper -->
+<div class="wrapper">
+ 
+  <!-- Sidebar -->
+  <nav ng-class="$ctrl.hide == false ? 'sidebar active' : 'sidebar'">
+
+      <!-- close sidebar menu -->
+      <div class="dismiss" ng-click="$ctrl.hide_menu()">
+          <i class="fas fa-arrow-left"></i>
+      </div>
+
+      <div class="logo">
+          <h3><a href="index.html">Bootstrap 4 Template with Sidebar Menu</a></h3>
+      </div>
+
+      <ul class="list-unstyled menu-elements">
+          <li class="active">
+              <a class="scroll-link" href="#"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+              <a class="scroll-link" ui-sref="app.kanban"><i class="fas fa-cog"></i> Quadro Kanban</a>
+          </li>
+          <li>
+              <a class="scroll-link" ui-sref="app.person-form()"><i class="fas fa-user"></i> cadastro Pessoa</a>
+          </li>
+          <li>
+              <a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i> Portfolio</a>
+          </li>
+          <li>
+              <a class="scroll-link" href="#section-6"><i class="fas fa-envelope"></i> Contact us</a>
+          </li>
+          <li>
+              <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
+                  <i class="fas fa-sync"></i>Other sections
+              </a>
+              <ul class="collapse list-unstyled" id="otherSections">
+                  <li>
+                      <a class="scroll-link" href="#section-3">Our projects</a>
+                  </li>
+                  <li>
+                      <a class="scroll-link" href="#section-4">We think that...</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+
+      <!-- <div class="to-top">
+          <a class="btn btn-primary btn-customized-3" href="#" role="button">
+              <i class="fas fa-arrow-up"></i> Top
+          </a>
+      </div> -->
+
+      <!-- <div class="dark-light-buttons">
+          <a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+          <a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+      </div> -->
+
+  </nav>
+  <!-- End sidebar -->
+
+  <!-- Dark overlay -->
+  <div class="overlay"></div>
+
+  <!-- Content -->
+  <div class="content">
+
+      <!-- open sidebar menu -->
+      <a class="btn btn-primary btn-customized open-menu" ng-click="$ctrl.hide_menu()" role="button">
+          <i class="fas fa-align-left"></i> <span>Menu</span>
+      </a>
+
+      <!-- ... -->
+
+      <!-- here is the page's content (not shown here) -->
+
+      <!-- ... -->
+
+  </div>
+  <!-- End content -->
+
 </div>
+<!-- End wrapper -->

@@ -42,15 +42,16 @@ html {
   opacity: 1 !important;
 }
 
+//Base.html
 .base_content {
-  width: calc(100% -78px);
+  width: calc(100% -250px);
   height: 100%;
-  left: 240px;
+  left: 250px;
   position: relative;
   display: flex;
   transition: all 0.5s ease;
   }
 .base_active {
-  width: calc(100% - 78px);
+  width: calc(100% - 250px);
   left: 78px;
 }
