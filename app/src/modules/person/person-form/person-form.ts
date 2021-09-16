@@ -4,6 +4,7 @@ class PersonFormController {
     private inputLabel: String
     private inputValue: String
     private label: String
+    private address: any
 
     constructor (
         public $uibModal,
@@ -11,6 +12,7 @@ class PersonFormController {
 
     $onInit() {
         this.label = 'Nome'
+        this.address = {zipCode: '87013-100', premisse: 'Rua Piratininga', number: '119', neighbourhood: 'Centro', location: 'Cidade', state: 'PR', coutruy: 'Brasil'}
     }
 
     open() {

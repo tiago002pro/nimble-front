@@ -7,8 +7,8 @@
 }
 body {
   position: relative;
-  width: 100%;
-  max-width: 100%;
+  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -53,5 +53,5 @@ html {
   }
 .base_active {
   width: calc(100% - 250px);
-  left: 78px;
+  left: 0px;
 }

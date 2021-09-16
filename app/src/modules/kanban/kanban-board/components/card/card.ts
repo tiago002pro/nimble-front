@@ -17,7 +17,7 @@ class CardController {
         
     }
 
-
+    
 }
 
 const card = {

@@ -2,6 +2,7 @@
   <!-- <navbar></navbar> -->
   <sidebar hide="$ctrl.hide"></sidebar>
   </div>
-    <div ng-class="$ctrl.hide == true ? 'base_active base_content' : 'base_content'"><div ui-view></div></div>
+    <!-- <div ng-class="$ctrl.hide == true ? 'base_active base_content' : 'base_content'"><div ui-view></div></div> -->
+    <ui-view hide="$ctrl.hide"></ui-view>
   <div>
 </div>
