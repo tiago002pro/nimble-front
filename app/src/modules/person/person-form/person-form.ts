@@ -1,6 +1,8 @@
 import { ModalCardController, templateModal } from "../../kanban/kanban-board/components/modal-card/modal-card";
+import { Person } from "../interfaces/person.interface";
 
 class PersonFormController {
+    private entity: Person
     private inputLabel: String
     private inputValue: String
     private label: String
@@ -11,6 +13,11 @@ class PersonFormController {
     ) {}
 
     $onInit() {
+
+        this.entity = {}
+        this.entity.name = "Tiago"
+        console.log(this.entity);
+        
         this.label = 'Nome'
         this.address = {zipCode: '87013-100', premisse: 'Rua Piratininga', number: '119', neighbourhood: 'Centro', location: 'Cidade', state: 'PR', coutruy: 'Brasil'}
     }
