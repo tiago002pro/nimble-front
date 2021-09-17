@@ -1,70 +1,47 @@
-<div class="person-form mbg-style">
+<div class="person-form">
     <div class="board-form">
-        <div class="board-content">
-            <div>
-                <h1>Título</h1>
+        <div class="content-area">
+            <div class="content-title">
+                <h3>Cadastrar cliente</h3>
             </div>
-            <!-- <div class="form">
+            <div class="content-person">
                 <div class="row">
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h4>Documentos</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label class="mbg-label input-label">CPF ou CNPJ</label>
-                                <div class="mbg-input-wrapper mb-input-text-wrapper">
-                                    <mgb-input-text class="name enable-enter" input-label="'CPF'" input-value="'099.088.000-77'">
-                                    </mgb-input-text>
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="mbg-label input-label">CNPJ</label>
-                                <div class="mbg-input-wrapper mb-input-text-wrapper">
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <label class="mbg-label input-label">CNPJ</label>
-                                <div class="mbg-input-wrapper mb-input-text-wrapper">
-                                    <input type="text" style="min-width:500px;">
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="mbg-label input-label">CNPJ</label>
-                                <div class="mbg-input-wrapper mb-input-text-wrapper">
-                                    <input type="text">
-                                </div>
-                            </div>
-                        </div>
-
-
+                    <div class="col-md-12">
+                        <h4>Documentos</h4>
                     </div>
                 </div>
+                <div class="row"
+                     style="margin-bottom: 20px;">
+                    <div class="col-md-6">
+                        <label class="input-label">CPF ou CNPJ</label>
+                        <mgb-input-text input-value="'(44) 98804-1230'"></mgb-input-text>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="input-label">RG</label>
+                        <div class="input-text">
+                            <mgb-input-text input-value="'tiago@gmail.com'"></mgb-input-text>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            </div> -->
-            <div class="form"
-                 style="margin-bottom: 30px;">
+            <div class="content-person">
                 <div class="row">
-                    <div class="col-md-12"
-                         style="margin-bottom: 30px;">
+                    <div class="col-md-12">
                         <h4>Dados pessoais</h4>
                     </div>
                 </div>
                 <div class="row"
-                     style="margin-bottom: 30px;">
-                    <div class="col-md-10">
+                     style="margin-bottom: 20px;">
+                    <div class="col-md-12">
                         <label class="input-label">Nome</label>
                         <mgb-input-text input-value="'Tiago Barbosa'"></mgb-input-text>
                     </div>
                 </div>
                 <div class="row"
-                     style="margin-bottom: 30px;">
+                     style="margin-bottom: 20px;">
                     <div class="col-md-2">
-                        <label class="input-label">Dia </label>
+                        <label class="input-label">Dia</label>
                         <mgb-input-text input-value="'22'"></mgb-input-text>
                     </div>
                     <div class="col-md-2">
@@ -75,7 +52,7 @@
                         <label class="input-label">Ano</label>
                         <mgb-input-text input-value="'1996'"></mgb-input-text>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label class="input-label">Gênero</label>
                         <div class="input-text">
                             <mgb-input-text input-value="'Masculino'"></mgb-input-text>
@@ -83,12 +60,12 @@
                     </div>
                 </div>
                 <div class="row"
-                     style="margin-bottom: 30px;">
-                    <div class="col-md-3">
+                     style="margin-bottom: 20px;">
+                    <div class="col-md-6">
                         <label class="input-label">Telefone</label>
                         <mgb-input-text input-value="'(44) 98804-1230'"></mgb-input-text>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <label class="input-label">Email</label>
                         <div class="input-text">
                             <mgb-input-text input-value="'tiago@gmail.com'"></mgb-input-text>
@@ -97,20 +74,19 @@
                 </div>
             </div>
 
-            <div class="form">
+            <div class="content-person">
                 <div class="row">
-                    <div class="col-md-12"
-                         style="margin-bottom: 30px;">
+                    <div class="col-md-12">
                         <h4>Endereços</h4>
                     </div>
                 </div>
                 <div class="row"
-                     style="margin-bottom: 30px;">
+                     style="margin-bottom: 20px;">
                     <div class="col-md-3">
                         <label class="input-label">CEP</label>
                         <mgb-input-text input-value="$ctrl.address.zipCode"></mgb-input-text>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-7">
                         <label class="input-label">Logradouro</label>
                         <div class="input-text">
                             <mgb-input-text input-value="$ctrl.address.premisse"></mgb-input-text>
@@ -124,8 +100,8 @@
                     </div>
                 </div>
                 <div class="row"
-                     style="margin-bottom: 30px;">
-                    <div class="col-md-5">
+                     style="margin-bottom: 20px;">
+                    <div class="col-md-7">
                         <label class="input-label">Bairro</label>
                         <div class="input-text">
                             <mgb-input-text input-value="$ctrl.address.neighbourhood"></mgb-input-text>
@@ -145,8 +121,8 @@
                     </div>
                 </div>
                 <div class="row"
-                     style="margin-bottom: 30px;">
-                    <div class="col-md-7">
+                     style="margin-bottom: 20px;">
+                    <div class="col-md-9">
                         <label class="input-label">Complemento</label>
                         <div class="input-text">
                             <mgb-input-text input-value="$ctrl.address.number"></mgb-input-text>
@@ -161,10 +137,10 @@
                 </div>
             </div>
         </div>
-        <div class="board-content2">
+        <!-- <div class="content-area-image">
             <div class="area-image">
-                <!-- <img src="https://firebasestorage.googleapis.com/v0/b/nimble-dcb73.appspot.com/o/brooklyn_nine_nine1.jpg_399056758.jpg?alt=media&token=7d192c2b-7c31-4937-8b1b-a5abfc7becb0" alt=""> -->
+                <img src="https://firebasestorage.googleapis.com/v0/b/nimble-dcb73.appspot.com/o/brooklyn_nine_nine1.jpg_399056758.jpg?alt=media&token=7d192c2b-7c31-4937-8b1b-a5abfc7becb0" alt="">
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
