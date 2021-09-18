@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-12">
+        <h4>Documentos</h4>
+    </div>
+</div>
+<div class="row"
+     style="margin-bottom: 20px;">
+    <div class="col-md-4">
+        <label class="input-label">CPF ou CNPJ</label>
+        <mgb-input-text input-value="$ctrl.person.cnpj"></mgb-input-text>
+    </div>
+    <div class="col-md-3" ng-if="$ctrl.pf">
+        <label class="input-label">RG</label>
+        <div class="input-text">
+            <mgb-input-text input-value="$ctrl.person.rg"></mgb-input-text>
+        </div>
+    </div>
+    <div class="col-md-3" ng-if="$ctrl.pj">
+        <label class="input-label">IE</label>
+        <div class="input-text">
+            <mgb-input-text input-value="$ctrl.person.ie"></mgb-input-text>
+        </div>
+    </div>
+</div>

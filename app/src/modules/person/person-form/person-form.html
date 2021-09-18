@@ -5,142 +5,17 @@
                 <h3>Cadastrar cliente</h3>
             </div>
             <div class="content-person">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4>Documentos</h4>
-                    </div>
-                </div>
-                <div class="row"
-                     style="margin-bottom: 20px;">
-                    <div class="col-md-4">
-                        <label class="input-label">CPF ou CNPJ</label>
-                        <mgb-input-text input-value="'000.222.666-88'"></mgb-input-text>
-                    </div>
-                    <div class="col-md-2">
-                        <label class="input-label">RG</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="'225566655-4'"></mgb-input-text>
-                        </div>
-                    </div>
-                </div>
+                <person-document person="$ctrl.entity"></person-document>
             </div>
-
             <div class="content-person">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4>Dados pessoais</h4>
-                    </div>
-                </div>
-                <div class="row"
-                     style="margin-bottom: 20px;">
-                    <div class="col-md-12">
-                        <label class="input-label">Nome</label>
-                        <mgb-input-text input-value="$ctrl.entity.name"></mgb-input-text>
-                    </div>
-                </div>
-                <div class="row"
-                     style="margin-bottom: 20px;">
-                    <div class="col-md-2">
-                        <label class="input-label">Dia</label>
-                        <mgb-input-text input-value="'22'"></mgb-input-text>
-                    </div>
-                    <div class="col-md-2">
-                        <label class="input-label">Mês</label>
-                        <mgb-input-text input-value="'09'"></mgb-input-text>
-                    </div>
-                    <div class="col-md-2">
-                        <label class="input-label">Ano</label>
-                        <mgb-input-text input-value="'1996'"></mgb-input-text>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="input-label">Gênero</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="'Masculino'"></mgb-input-text>
-                        </div>
-                    </div>
-                </div>
-                <div class="row"
-                     style="margin-bottom: 20px;">
-                    <div class="col-md-6">
-                        <label class="input-label">Telefone</label>
-                        <mgb-input-text input-value="'(44) 98804-1230'"></mgb-input-text>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="input-label">Email</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="'tiago@gmail.com'"></mgb-input-text>
-                        </div>
-                    </div>
-                </div>
+                <person-data emails="$ctrl.entity.emails" phones="$ctrl.entity.phones" person="$ctrl.entity"></person-data>
             </div>
-
             <div class="content-person">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4>Endereços</h4>
-                    </div>
-                </div>
-                <div class="row"
-                     style="margin-bottom: 20px;">
-                    <div class="col-md-3">
-                        <label class="input-label">CEP</label>
-                        <mgb-input-text input-value="$ctrl.address.zipCode"></mgb-input-text>
-                    </div>
-                    <div class="col-md-7">
-                        <label class="input-label">Logradouro</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="$ctrl.address.premisse"></mgb-input-text>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <label class="input-label">Número</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="$ctrl.address.number"></mgb-input-text>
-                        </div>
-                    </div>
-                </div>
-                <div class="row"
-                     style="margin-bottom: 20px;">
-                    <div class="col-md-7">
-                        <label class="input-label">Bairro</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="$ctrl.address.neighbourhood"></mgb-input-text>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label class="input-label">Cidade</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="$ctrl.address.location"></mgb-input-text>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <label class="input-label">Estado</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="$ctrl.address.state"></mgb-input-text>
-                        </div>
-                    </div>
-                </div>
-                <div class="row"
-                     style="margin-bottom: 20px;">
-                    <div class="col-md-9">
-                        <label class="input-label">Complemento</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="$ctrl.address.number"></mgb-input-text>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label class="input-label">País</label>
-                        <div class="input-text">
-                            <mgb-input-text input-value="$ctrl.address.coutruy"></mgb-input-text>
-                        </div>
-                    </div>
-                </div>
+                <person_location addresses="$ctrl.entity.addresses"></person_location>
+            </div>
+            <div class="button">
+                <button type="button" class="btn btn-primary" ng-click="$ctrl.save()">Salvar</button>
             </div>
         </div>
-        <!-- <div class="content-area-image">
-            <div class="area-image">
-                <img src="https://firebasestorage.googleapis.com/v0/b/nimble-dcb73.appspot.com/o/brooklyn_nine_nine1.jpg_399056758.jpg?alt=media&token=7d192c2b-7c31-4937-8b1b-a5abfc7becb0" alt="">
-            </div>
-        </div> -->
     </div>
 </div>
