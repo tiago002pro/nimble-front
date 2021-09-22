@@ -18,10 +18,17 @@ const personFormMudule = angular
     .config(['$stateProvider', ($stateProvider) => {
         $stateProvider
         .state('app.person-form', {
-            url: '/person-form',
+            url: '/person-form/:rule',
             templateUrl: template,
             controller: PersonFormController,
-            controllerAs: '$ctrl'
+            controllerAs: '$ctrl',
+            resolve: {
+                rule: [
+                    '$stateParams', ($stateParams) => {
+                        return $stateParams.rule
+                    }
+                ]
+            }
         })
     }])
     .name

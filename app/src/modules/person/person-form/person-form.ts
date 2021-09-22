@@ -10,10 +10,14 @@ class PersonFormController {
     private label: String
 
     constructor (
+        public $scope,
+        public rule,
+        public $state,
     ) {}
 
     $onInit() {
-
+        console.log("ruleee", this.rule);
+        
         this.entity = {}
         this.entity.addresses = []
         this.entity.emails = []
@@ -31,6 +35,10 @@ class PersonFormController {
 }
 
 PersonFormController['$inject'] = [
+    '$scope',
+    'rule',
+    '$state',
+
 ]
 
 export { PersonFormController }
