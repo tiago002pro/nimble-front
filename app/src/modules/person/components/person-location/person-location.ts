@@ -9,7 +9,7 @@ class PersonLocationController {
 
     $onInit() {
         this.address = {}
-        this.addresses.push(this.address)
+        // this.addresses.push(this.address)
     }
 }
 

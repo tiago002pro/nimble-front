@@ -7,6 +7,7 @@ import { mgbInputNumber } from '../../components/mgb-input-number/mgb-input-numb
 import { personDocument } from '../components/person-documents/person-documents'
 import { personData } from '../components/person-data/person-data'
 import { personLocation } from '../components/person-location/person-location'
+import { PersonService } from '../services/person.service'
 
 const personFormMudule = angular
     .module('person-form', [])
@@ -15,6 +16,7 @@ const personFormMudule = angular
     .component('personDocument', personDocument)
     .component('personData', personData)
     .component('personLocation', personLocation)
+    .service('personService', PersonService)
     .config(['$stateProvider', ($stateProvider) => {
         $stateProvider
         .state('app.person-form', {
@@ -23,11 +25,18 @@ const personFormMudule = angular
             controller: PersonFormController,
             controllerAs: '$ctrl',
             resolve: {
-                rule: [
-                    '$stateParams', ($stateParams) => {
-                        return $stateParams.rule
-                    }
-                ]
+                rule: ['$stateParams', ($stateParams) => $stateParams.rule]
+            }
+        })
+        .state('app.person-edit', {
+            url:'/person-form/:rule/:id',
+            templateUrl: template,
+            controller: PersonFormController,
+            resolve: {
+                person: ['$stateParams', 'personService', ($stateParams, personService: PersonService) => {
+                    return personService.loadById($stateParams.id).then((response) => response.data)
+                }],
+                rule: ['$stateParams', ($stateParams) => $stateParams.rule]
             }
         })
     }])

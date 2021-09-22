@@ -19,7 +19,7 @@
     }
     
     .content-person {
-        margin-bottom: 45px;
+        // margin-bottom: 45px;
     }
 
     .button {
@@ -31,5 +31,11 @@
         width: 200px;
         height: 50px;
         font-size: 24px;
+        margin-top: 10px;
+    }
+    @media (max-width: 900px) {
+        .content-area {
+            overflow-y: auto;
+        }
     }
 }

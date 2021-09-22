@@ -9,14 +9,20 @@ class PersonDocumentController {
     constructor() {}
 
     $onInit() {
-        if (isNullOrUndefined(this.person.cpf)) {
-            this.pj = true
-        } else if (isNullOrUndefined(this.person.cnpj)) {
-            this.pf = true
-        } else {
-            console.log("error");
+        this.pf = true
+        
+        // if (isNullOrUndefined(this.person.cpf)) {
+        //     this.pj = true
+        //     console.log("pj");
             
-        }
+        // } else if (isNullOrUndefined(this.person.cnpj)) {
+        //     this.pf = true
+        //     console.log("pf");
+
+        // } else {
+        //     console.log("error");
+            
+        // }
     }
 }
 
