@@ -2,17 +2,17 @@
     // background: url("https://images8.alphacoders.com/105/1054256.jpg");
     // background-size: 1920px;
     background-color: #97979704;
+
     .frame-zone {
-        width: auto;
+        width: 100vw;
         height: 100vh;
         padding: 10px 10px 10px 10px;
         display: inline-flex;
         background-size: contain;
         color: #000 !important;
-        // backdrop-filter: blur(20px);
+        overflow: scroll;
     }
     .frame {
-        overflow-x: auto;
     }
     .boards {
         height: 40px;

@@ -1,21 +1,12 @@
 
-
-body {
-    min-height: 100vh;
-    background: url(https://firebasestorage.googleapis.com/v0/b/nimble-dcb73.appspot.com/o/bg.jpg?alt=media&token=669a0039-e035-4f4f-8dfd-2f9bec1b46a0)no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 .side-bar {
     background: rbga(255, 255, 255, 0);
     backdrop-filter: blur(15px);
-    width: 290px;
+    width: 250px;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: -100%;
-    overflow-y: auto;
     transition: 0.6s ease;
     transition-property: left;
 }

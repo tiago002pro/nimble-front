@@ -1,34 +1,60 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
   position: relative;
   width: 100vw;
   max-width: 100vw;
   height: 100vh;
-  // overflow-y: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
-  background-color: #f5f5f5;
-  display: flex;
+  // background-color: #f5f5f5;
+  display: flex;  
+
+  background: url(https://firebasestorage.googleapis.com/v0/b/nimble-dcb73.appspot.com/o/bg.jpg?alt=media&token=669a0039-e035-4f4f-8dfd-2f9bec1b46a0)no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
 html {
   font-family: 'Nunito Sans', sans-serif;
 }
+
+.base_content {
+  width: calc(100% -250px);
+  height: 100%;
+  left: 50px;
+  position: relative;
+  display: flex;
+  transition: all 0.3s ease;
+  }
+
+.base_content.active {
+  width: calc(100% - 250px);
+  left: 250px;
+  position: none;
+}
+
 // Scroll
 ::-webkit-scrollbar {
   width: 5px;
-  height: 7px;
+  height: 15px;
 }
+
 ::-webkit-scrollbar-track {
   background: #1d1b31;
 }
+
 ::-webkit-scrollbar-corner {
   // background-color: red;
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: #6c63c4;
@@ -38,20 +64,7 @@ html {
 .modal-backdrop {
   background: rgba(50, 50, 50, 0.50) !important;
 }
+
 .fade:not(.show) {
   opacity: 1 !important;
-}
-
-//Base.html
-.base_content {
-  width: calc(100% -250px);
-  height: 100%;
-  left: 250px;
-  position: relative;
-  display: flex;
-  transition: all 0.5s ease;
-  }
-.base_active {
-  width: calc(100% - 250px);
-  left: 0px;
 }

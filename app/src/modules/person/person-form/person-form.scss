@@ -1,38 +1,35 @@
 .person-form {
     .board-form {
         width: 100vw;
-        height: auto;
-        margin: auto;
-        background: rgb(30, 50, 100);
-        display: flex;
-        justify-content: center;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        overflow-y: auto;
+        height: 100vh;
+        padding: 10px 10px 10px 10px;
+        display: inline-flex;
+        background-size: contain;
+        color: #000 !important;
     }
+    
     .content-area {
-        // background-color: aqua;
-        width: 60vw;
-        // height: 90vh;
-        margin: auto;
         background-color: #FFF;
-        padding: 30px;
-        // padding-left: 20px;
-        // padding-top: 20px;
-        // margin-right: 0px;
-        display: grid;
+        padding: 50px;
         z-index: auto;
-        overflow-y: auto;
     }
+
     .content-title {
-        // background-color: blueviolet;
+        margin-bottom: 20px;
     }
+    
     .content-person {
-        margin-bottom: 20px;
+        margin-bottom: 45px;
     }
+
     .button {
-        margin-bottom: 20px;
         display: flex;
         justify-content: center;
+    }
+    
+    .button button {
+        width: 200px;
+        height: 50px;
+        font-size: 24px;
     }
 }

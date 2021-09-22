@@ -16,8 +16,6 @@ class PersonFormController {
     ) {}
 
     $onInit() {
-        console.log("ruleee", this.rule);
-        
         this.entity = {}
         this.entity.addresses = []
         this.entity.emails = []

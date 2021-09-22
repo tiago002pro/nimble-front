@@ -7,7 +7,7 @@ class SidebarController {
     private showdropDowMenu2 = false
     private black = true
     private white = false
-    private showMenu = true
+    private showMenu: boolean
 
     constructor (
         public $scope,
@@ -33,7 +33,7 @@ class SidebarController {
 
 const sideBar = {
     bindings: {
-        hide: '=?',
+        showMenu: '=?',
     },
     controller: SidebarController,
     controllerAs: '$ctrl',

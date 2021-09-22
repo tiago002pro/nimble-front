@@ -16,8 +16,6 @@ class BoardService {
     }
 
     openCardModal() {
-        console.log("OPEN");
-        
         const modalInstance = this.$uibModal.open({
           templateUrl: templateModal,
           controller: ModalCardController,
