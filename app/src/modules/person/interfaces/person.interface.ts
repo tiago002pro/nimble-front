@@ -14,6 +14,8 @@ export interface Person {
     documents?: Array<PersonDocument>,
     roleList?: Array<PersonRuleList>,
     shortName?: String,
+    cpf?: String,
+    rg?: String,
     cnpj?: String,
     ie?: String,
 }

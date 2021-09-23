@@ -7,8 +7,6 @@ class ModalCardController {
     ) {}
 
     $onInit() {
-        console.log("Modal");
-        
     }
 }
 

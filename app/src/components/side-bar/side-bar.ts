@@ -3,9 +3,11 @@ import template from './side-bar.html'
 
 class SidebarController {
     private hide: boolean
-    private showdropDowMenu: boolean
+    private showdropDowMenu1 = false
+    private showdropDowMenu2 = false
     private black = true
     private white = false
+    private showMenu: boolean
 
     constructor (
         public $scope,
@@ -14,33 +16,24 @@ class SidebarController {
     ) {}
 
     $onInit() {
-        this.showdropDowMenu = false
     }
 
-    hide_menu(){
-        this.hide = !this.hide
-        if(this.hide) {
-            this.showdropDowMenu = false;
-        }
+    dropDow1() {
+        this.showdropDowMenu1 = !this.showdropDowMenu1
     }
 
-    dropDowMenu() {
-        this.showdropDowMenu = !this.showdropDowMenu
-        if (this.hide) {
-            this.hide = false
-        }
-        
+    dropDow2() {
+        this.showdropDowMenu2 = !this.showdropDowMenu2
     }
 
-    collorMenu() {
-        this.black = !this.black
-        this.white = !this.white
+    SeeMenu() {
+        this.showMenu = !this.showMenu
     }
 }
 
 const sideBar = {
     bindings: {
-        hide: '=?',
+        showMenu: '=?',
     },
     controller: SidebarController,
     controllerAs: '$ctrl',

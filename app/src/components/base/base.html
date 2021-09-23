@@ -1,8 +1,8 @@
 <div>
   <!-- <navbar></navbar> -->
-  <sidebar hide="$ctrl.hide"></sidebar>
+  <sidebar show-menu="$ctrl.showMenu"></sidebar>
   </div>
-    <!-- <div ng-class="$ctrl.hide == true ? 'base_active base_content' : 'base_content'"><div ui-view></div></div> -->
-    <ui-view hide="$ctrl.hide"></ui-view>
+    <div ng-class="$ctrl.showMenu == false ? 'base_content' : 'base_content active'"><div ui-view></div></div>
+    <!-- <ui-view hide="$ctrl.hide"></ui-view> -->
   <div>
 </div>

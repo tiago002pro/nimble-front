@@ -2,49 +2,40 @@
     .board-form {
         width: 100vw;
         height: 100vh;
-        margin: auto;
-        background: rgb(30, 50, 100);
+        padding: 10px 10px 10px 10px;
+        display: inline-flex;
+        background-size: contain;
+        color: #000 !important;
+    }
+    
+    .content-area {
+        background-color: #FFF;
+        padding: 50px;
+        z-index: auto;
+    }
+
+    .content-title {
+        margin-bottom: 20px;
+    }
+    
+    .content-person {
+        // margin-bottom: 45px;
+    }
+
+    .button {
         display: flex;
         justify-content: center;
     }
-    .content-area {
-        // background-color: aqua;
-        width: 60vw;
-        height: 90vh;
-        margin: auto;
-        background-color: #FFF;
-        padding: 30px;
-        // padding-left: 20px;
-        // padding-top: 20px;
-        // margin-right: 0px;
-        display: grid;
-        z-index: auto;
-        overflow-y: auto;
+    
+    .button button {
+        width: 200px;
+        height: 50px;
+        font-size: 24px;
+        margin-top: 10px;
     }
-    .content-title {
-        // background-color: blueviolet;
+    @media (max-width: 900px) {
+        .content-area {
+            overflow-y: auto;
+        }
     }
-    .content-person {
-        margin-bottom: 20px;
-    }
-    // .content-area-image {
-    //     //background-color: red;
-    //     width: 20vw;
-    //     height: 80vh;
-    //     margin: auto;
-    //     background-color: #FFF;
-    //     padding: 20px;
-    //     margin-left: 0px;
-    // }
-    // .area-image {
-    //     width: 200px;
-    //     height: 200px;
-    //     overflow: hidden;
-    //     margin-top: 80px;
-    //     border-radius: 300px;
-    //     border: 1px solid #121212;
-    // }
-    // .area-image img{
-    //     width: 300px;
-    // }
 }

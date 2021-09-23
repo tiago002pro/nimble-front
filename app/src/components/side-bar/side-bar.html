@@ -1,101 +1,29 @@
-<!-- Wrapper -->
-<div class="wrapper">
-
-    <!-- Sidebar -->
-    <nav ng-class="$ctrl.hide == false ? 'sidebar active' : 'sidebar'">
-
-        <!-- close sidebar menu -->
-        <div class="dismiss" ng-click="$ctrl.hide_menu()">
-            <i class="fas fa-arrow-left"></i>
-        </div>
-
-        <div class="logo">
-            <h3><a href="index.html">Bootstrap 4 Template with Sidebar Menu</a></h3>
-        </div>
-
-        <ul class="list-unstyled menu-elements">
-            <li class="active">
-                <a class="scroll-link" href="#"><i class="fas fa-home"></i> Home</a>
-            </li>
-            <li>
-                <a class="scroll-link" ui-sref="app.kanban"><i class="fas fa-cog"></i> Quadro Kanban</a>
-            </li>
-            <li>
-                <a href="#otherSections" 
-                    data-toggle="collapse" 
-                    aria-expanded="false" 
-                    class="dropdown-toggle"
-                    role="button" 
-                    aria-controls="otherSections">
-                    <i class="fas fa-user"></i> Cadastro
-                </a>
-                <ul class="collapse list-unstyled" id="otherSections">
-                    <li>
-                        <a class="scroll-link" ui-sref="app.person-form()">Cliente</a>
-                    </li>
-                    <li>
-                        <a class="scroll-link" href="#section-4">Fornecedor</a>
-                    </li>
-                    <li>
-                        <a class="scroll-link" href="#section-4">Funcionário</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i> Portfolio</a>
-            </li>
-            <li>
-                <a class="scroll-link" href="#section-6"><i class="fas fa-envelope"></i> Contact us</a>
-            </li>
-            <li>
-                <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
-                    role="button" aria-controls="otherSections">
-                    <i class="fas fa-sync"></i>Other sections
-                </a>
-                <ul class="collapse list-unstyled" id="otherSections">
-                    <li>
-                        <a class="scroll-link" href="#section-3">Our projects</a>
-                    </li>
-                    <li>
-                        <a class="scroll-link" href="#section-4">We think that...</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <!-- <div class="to-top">
-          <a class="btn btn-primary btn-customized-3" href="#" role="button">
-              <i class="fas fa-arrow-up"></i> Top
-          </a>
-      </div> -->
-
-        <!-- <div class="dark-light-buttons">
-          <a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
-          <a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
-      </div> -->
-
-    </nav>
-    <!-- End sidebar -->
-
-    <!-- Dark overlay -->
-    <div class="overlay"></div>
-
-    <!-- Content -->
-    <div class="content">
-
-        <!-- open sidebar menu -->
-        <a class="btn btn-primary btn-customized open-menu" ng-click="$ctrl.hide_menu()" role="button">
-            <i class="fas fa-align-left"></i> <span>Menu</span>
-        </a>
-
-        <!-- ... -->
-
-        <!-- here is the page's content (not shown here) -->
-
-        <!-- ... -->
-
-    </div>
-    <!-- End content -->
-
+<div class="menu-btn" ng-click="$ctrl.SeeMenu()">
+    <i class="fas fa-bars"></i>
 </div>
-<!-- End wrapper -->
+<div ng-class="$ctrl.showMenu == true ? 'side-bar active' : 'side-bar'">
+    <div class="close-btn" ng-click="$ctrl.SeeMenu()">
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="menu">
+        <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div>
+        <div class="item">
+            <a class="sub-btn" ng-click="$ctrl.dropDow1()"><i class="fas fa-plus-circle"></i>Cadastros<i ng-class="$ctrl.showdropDowMenu1 == true ? 'fas fa-angle-right dropdown rotate' :  'fas fa-angle-right dropdown'"></i></a>
+            <div ng-class="$ctrl.showdropDowMenu1 == true ? 'sub-menu active' : 'sub-menu'">
+                <a ui-sref="app.person-form({rule: 'Clientes'})" class="sub-item">Clientes</a>
+                <a ui-sref="app.person-list({rule: 'Fornecedores'})" class="sub-item">Fornecedores</a>
+                <a ui-sref="app.person-form({rule: 'Funcionários'})" class="sub-item">Funcionários</a>
+            </div>
+        </div>
+        <div class="item"><a href="#"><i class="fas fa-th"></i>Forms</a></div>
+        <div class="item">
+            <a class="sub-btn" ng-click="$ctrl.dropDow2()"><i class="fas fa-cogs"></i>Tarefas<i ng-class="$ctrl.showdropDowMenu1 == true ? 'fas fa-angle-right dropdown rotate' :  'fas fa-angle-right dropdown'"></i></a>
+            <div ng-class="$ctrl.showdropDowMenu2 == true ? 'sub-menu active' : 'sub-menu'">
+                <a ui-sref="app.kanban()" class="sub-item">Kanban</a>
+                <a href="" class="sub-item">Sub Item 02</a>
+                <a href="" class="sub-item">Sub Item 03</a>
+            </div>
+        </div>
+        <div class="item"><a href="#"><i class="fas fa-info-circle"></i>About</a></div>
+    </div>
+</div>

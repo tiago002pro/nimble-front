@@ -5,7 +5,19 @@ class PersonService {
     ) {}
 
     createJuridicalPerson() {
-        return this.$http.post(`${this.url}/api/pessoa-juridica/form`)
+        return this.$http.post(`${this.url}/api/person-juridica/form`)
+    }
+
+    createIndividual(entity)  {
+        return this.$http.post(`${this.url}/api/person-individual/form`, entity)
+    }
+
+    getPersonList() {
+        return this.$http.get(`${this.url}/api/person/get/person-list`)
+    }
+
+    loadById(id) {
+        return this.$http.get(`${this.url}/api/person/${id}`)
     }
 }
 

@@ -9,9 +9,6 @@ class MgbInpuNumberController {
     ) {}
 
     $onInit() {
-        console.log("AAA", this.inputLabel, this.inputValue);
-        
-
     }
 }
 

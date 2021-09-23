@@ -10,8 +10,6 @@ class MgbInputTextController {
     ) {}
 
     $onInit() {
-        console.log("AAA", this.inputLabel, this.inputValue, this.ngModel);
-        
 
     }
 }
