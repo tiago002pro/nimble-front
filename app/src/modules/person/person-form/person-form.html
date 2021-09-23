@@ -1,20 +1,23 @@
 <div class="person-form">
     <div class="board-form">
         <div class="content-area">
-            <div class="content-title">
-                <h2>Cadastrar {{$ctrl.rule}}</h2>
-            </div>
-            <div class="content-person">
-                <person-document person="$ctrl.entity"></person-document>
-            </div>
-            <div class="content-person">
-                <person-data emails="$ctrl.entity.emails" phones="$ctrl.entity.phones" entity="$ctrl.entity" person="$ctrl.person"></person-data>
-            </div>
-            <div class="content-person">
-                <person_location addresses="$ctrl.entity.addresses"></person_location>
-            </div>
-            <div class="button">
-                <button type="button" class="btn btn-primary" ng-click="$ctrl.save()">Salvar</button>
+            <div class="content-form">
+                <div class="content-title">
+                    <h2>Cadastrar {{$ctrl.rule}}</h2>
+                </div>
+                <div class="content-person">
+                    <person-document person="$ctrl.entity"></person-document>
+                </div>
+                <div class="content-person">
+                    <person-data emails="$ctrl.entity.emails" phones="$ctrl.entity.phones" entity="$ctrl.entity"></person-data>
+                </div>
+                <div class="content-person">
+                    <person_location addresses="$ctrl.entity.addresses"></person_location>
+                </div>
+                <div class="button">
+                    <button type="button" class="btn btn-dark" ng-click="$ctrl.save()">Salvar</button>
+                    <div class="button-back"><a ng-click="$ctrl.back()">Voltar</a></div>
+                </div>
             </div>
         </div>
     </div>

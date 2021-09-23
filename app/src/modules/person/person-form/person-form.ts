@@ -1,12 +1,13 @@
-import { isNullOrUndefined } from "@uirouter/core";
+import { isNullOrUndefined, trimHashVal } from "@uirouter/core";
 import { ModalCardController, templateModal } from "../../kanban/kanban-board/components/modal-card/modal-card";
 import { PersonAddress } from "../interfaces/person.address.interface";
 import { PersonEmail } from "../interfaces/person.email.interface";
 import { Person } from "../interfaces/person.interface";
 import { PersonService } from "../services/person.service";
+import swal from 'sweetalert';
+
 
 class PersonFormController {
-    private entity: Person
     private inputLabel: String
     private inputValue: String
     private label: String
@@ -14,42 +15,50 @@ class PersonFormController {
     constructor (
         public $scope,
         public rule,
-        public person: Person,
         public $state,
-        public personService: PersonService
+        public personService: PersonService,
+        private entity: Person
     ) {}
 
     $onInit() {
-        console.log("person", this.person);
-        this.entity = {}
-        this.entity.addresses = []
-        this.entity.emails = []
-        this.entity.phones = []
-        this.entity.documents = []
-
-        if(!isNullOrUndefined(this.person)) {
-            this.entity = this.person
+        if (isNullOrUndefined(this.entity)) {
+            this.entity = {}
+            this.entity.addresses = []
+            this.entity.emails = []
+            this.entity.phones = []
+            this.entity.documents = []
+            
         }
-
-        console.log("person", this.person);
-        console.log("entity", this.entity);
-
-        
     }
 
     save() {
-        console.log("Save Person", this.entity);
-        this.personService.createIndividual(this.entity)
-        
+        try {
+            console.log("Save Person", this.entity);
+            this.personService.createIndividual(this.entity)
+            swal({
+                title: "Cadastro realizado com sucesso!",
+                icon: "success",
+              });
+              history.back()
+            
+        } catch(e) {
+            console.log("Error Save Person");
+            
+        }
+
+    }
+
+    back() {
+        history.back()
     }
 }
 
 PersonFormController['$inject'] = [
     '$scope',
     'rule',
-    'person',
     '$state',
     'personService',
+    'entity',
 ]
 
 export { PersonFormController }

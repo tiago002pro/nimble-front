@@ -17,14 +17,19 @@
     .content-title {
         margin-bottom: 20px;
     }
+
+    .content-form {
+        width: 80vw;
+    }
     
     .content-person {
         // margin-bottom: 45px;
     }
 
     .button {
-        display: flex;
+        display: grid;
         justify-content: center;
+        text-align: center;
     }
     
     .button button {
@@ -37,5 +42,10 @@
         .content-area {
             overflow-y: auto;
         }
+    }
+
+    .button-back {
+        margin-top: 10px;
+        cursor: pointer;
     }
 }

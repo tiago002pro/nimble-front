@@ -10,9 +10,9 @@
         <div class="item">
             <a class="sub-btn" ng-click="$ctrl.dropDow1()"><i class="fas fa-plus-circle"></i>Cadastros<i ng-class="$ctrl.showdropDowMenu1 == true ? 'fas fa-angle-right dropdown rotate' :  'fas fa-angle-right dropdown'"></i></a>
             <div ng-class="$ctrl.showdropDowMenu1 == true ? 'sub-menu active' : 'sub-menu'">
-                <a ui-sref="app.person-form({rule: 'Clientes'})" class="sub-item">Clientes</a>
+                <a ui-sref="app.person-list({rule: 'Clientes'})" class="sub-item">Clientes</a>
                 <a ui-sref="app.person-list({rule: 'Fornecedores'})" class="sub-item">Fornecedores</a>
-                <a ui-sref="app.person-form({rule: 'Funcionários'})" class="sub-item">Funcionários</a>
+                <a ui-sref="app.person-list({rule: 'Funcionários'})" class="sub-item">Funcionários</a>
             </div>
         </div>
         <div class="item"><a href="#"><i class="fas fa-th"></i>Forms</a></div>

@@ -1,8 +1,8 @@
-import { Person } from "../interfaces/person.interface";
 import { PersonService } from "../services/person.service";
 
 class PersonListController {
     private listPerson: any
+    private ruleTitle
 
     constructor (
         public $scope,
@@ -14,10 +14,16 @@ class PersonListController {
     async $onInit() {
         this.listPerson = await this.personService.getPersonList().then((response) => {return response.data})
 
-        //  const person = await this.personService.loadById(1).then((response) => {return response.data})
-         
-         
-        
+        switch(this.rule) {
+            case "Clientes": 
+                this.ruleTitle = "Cliente"
+                break;
+            case "Fornecedores": 
+                this.ruleTitle = "Fornecedor"
+                break
+            default:
+                this.ruleTitle = "Funcionário"
+        }
     }
 }
 

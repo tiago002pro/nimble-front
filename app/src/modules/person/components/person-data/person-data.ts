@@ -10,14 +10,11 @@ class PersonDataController {
     private phones
     private email: PersonEmail
     private phone: PersonPhone
-    private person: Person
-    private entity: Person
+    private entity
     constructor() {}
 
     $onInit() {
-        console.log("aaaaaa", this.person);
-
-        if (isNullOrUndefined(this.person)) {
+        if (isNullOrUndefined(this.entity)) {
             console.log("vixi");
             
             this.email = {}
@@ -25,8 +22,6 @@ class PersonDataController {
             this.emails.push(this.email)
             this.phones.push(this.phone)
         } else {
-            console.log("aaaa", this.entity);
-            console.log("aaaaaa", this.person);
             
             
         }
@@ -38,7 +33,6 @@ const personData = {
         emails: '=?',
         phones: '=?',
         entity: '=?',
-        person: '=?',
     },
     controller: PersonDataController,
     controllerAs: '$ctrl',

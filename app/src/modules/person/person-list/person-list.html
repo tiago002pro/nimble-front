@@ -1,34 +1,35 @@
 <div class="person-list">
-    <div class="board-list">
-        <div class="content-area">
-            <div class="content-title">
-                <h2>Lista de {{$ctrl.rule}}</h2>
-            </div>
-            <div class="table">
-                <div class="col-md-12">
-                    <table class="table table-striped">
-                        <thead class="thead-dark">
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Data de nasc/fund</th>
-                            <th scope="col">CPF/CNPJ</th>
-                            <th scope="col">Editar</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr ng-repeat="person in $ctrl.listPerson">
-                            <th scope="row">{{person.id}}</th>
-                            <td>{{person.name}}</td>
-                            <td>{{person.dateofbirthorfondation}}</td>
-                            <td>{{person.cpf}}</td>
-                            <td><i class="fas fa-edit"></i></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
-            </div>
-            
-        </div>
+  <div class="board-list">
+    <div class="content-area">
+      <div class="content-title">
+        <h2>Lista de {{$ctrl.rule}}</h2>
+      </div>
+      <div class="new-person-button">
+        <button type="button" class="btn btn-primary" ui-sref="app.person-form({rule: $ctrl.rule})">Novo {{$ctrl.ruleTitle}}</button>
+      </div>
+      <div class="table">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Data de nasc/fund</th>
+              <th scope="col">CPF/CNPJ</th>
+              <th scope="col">Editar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in $ctrl.listPerson">
+              <th scope="row">{{person.id}}</th>
+              <td>{{person.name}}</td>
+              <td>{{person.dateofbirthorfondation}}</td>
+              <td>{{person.cpf}}</td>
+              <td><a ui-sref="app.person-edit({rule: $ctrl.rule, id: person.id})"><i class="fas fa-edit"></i></a></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
+  </div>
 </div>

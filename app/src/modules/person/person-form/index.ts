@@ -25,15 +25,16 @@ const personFormMudule = angular
             controller: PersonFormController,
             controllerAs: '$ctrl',
             resolve: {
+                entity: [() => {return null}],
                 rule: ['$stateParams', ($stateParams) => $stateParams.rule]
             }
         })
         .state('app.person-edit', {
-            url:'/person-form/:rule/:id',
+            url:'/person-form/:rule/edit/:id',
             templateUrl: template,
             controller: PersonFormController,
             resolve: {
-                person: ['$stateParams', 'personService', ($stateParams, personService: PersonService) => {
+                entity: ['$stateParams', 'personService', ($stateParams, personService: PersonService) => {
                     return personService.loadById($stateParams.id).then((response) => response.data)
                 }],
                 rule: ['$stateParams', ($stateParams) => $stateParams.rule]
