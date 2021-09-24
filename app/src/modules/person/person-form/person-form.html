@@ -5,6 +5,24 @@
                 <div class="content-title">
                     <h2>Cadastrar {{$ctrl.rule}}</h2>
                 </div>
+
+
+                <div class="row"
+                    style="margin-bottom: 20px;">
+                    <div class="col-md-4">
+                        <label class="input-label">CPF ou CNPJ</label>
+                        <div class="input-text">
+                            <input type="text"
+                                style="width: 100%;"
+                                ng-model="$ctrl.document"
+                                placeholder=""
+                                maxlength="18"
+                                ui-br-cpfcnpj-mask>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="content-person">
                     <person-document entity="$ctrl.entity"></person-document>
                 </div>

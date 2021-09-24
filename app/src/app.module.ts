@@ -14,6 +14,7 @@ angular.module('app', [
     'app.management',
     'app.kanban',
     'app.person',
+    require('angular-input-masks')
 ])
 .component('base', base)
 .component('sidebar', sideBar)

@@ -11,6 +11,7 @@ class PersonFormController {
     private inputLabel: String
     private inputValue: String
     private label: String
+    private document: String
 
     constructor (
         public $scope,
@@ -36,6 +37,8 @@ class PersonFormController {
     }
 
     save() {
+        console.log("doc", this.document);
+        
         try {
             console.log("Save Person", this.entity);
             this.entity.ruleList = [{rule: this.rule}]
@@ -55,6 +58,21 @@ class PersonFormController {
 
     back() {
         history.back()
+    }
+
+    personType(teste) {
+        console.log("5", teste);
+        
+        if (this.document.length == 11) {
+            console.log("CPF", this.document);
+            this.entity.cpf = this.document
+            
+        } else {
+            console.log("CNPJ", this.document);
+            this.entity.cnpj = this.document
+
+        }
+        
     }
 }
 
