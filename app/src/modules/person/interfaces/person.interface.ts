@@ -12,7 +12,7 @@ export interface Person {
     phones?: Array<PersonPhone>,
     emails?: Array<PersonEmail>,
     documents?: Array<PersonDocument>,
-    roleList?: Array<PersonRuleList>,
+    ruleList?: Array<PersonRuleList>,
     shortName?: String,
     cpf?: String,
     rg?: String,

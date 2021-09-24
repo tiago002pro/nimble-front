@@ -1,5 +1,5 @@
 class PersonService {
-    private url: String = 'http://localhost:8080/'
+    private url: String = 'http://localhost:8080'
     constructor (
         private $http,
     ) {}
@@ -14,6 +14,10 @@ class PersonService {
 
     getPersonList() {
         return this.$http.get(`${this.url}/api/person/get/person-list`)
+    }
+
+    getPersonListByRule(rule) {
+        return this.$http.get(`${this.url}/api/person/get/person-list/rule?rule=${rule}`)
     }
 
     loadById(id) {

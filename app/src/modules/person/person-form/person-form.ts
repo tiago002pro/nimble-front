@@ -28,6 +28,7 @@ class PersonFormController {
             this.entity.emails = [{}]
             this.entity.phones = [{}]
             this.entity.documents = []
+            this.entity.ruleList = [{}]
             
         } else {
             console.log("entity", this.entity);
@@ -37,6 +38,7 @@ class PersonFormController {
     save() {
         try {
             console.log("Save Person", this.entity);
+            this.entity.ruleList = [{rule: this.rule}]
             this.personService.createIndividual(this.entity)
             swal({
                 title: "Cadastro realizado com sucesso!",
