@@ -33,6 +33,7 @@ const personFormMudule = angular
             url:'/person-form/:rule/edit/:id',
             templateUrl: template,
             controller: PersonFormController,
+            controllerAs: '$ctrl',
             resolve: {
                 entity: ['$stateParams', 'personService', ($stateParams, personService: PersonService) => {
                     return personService.loadById($stateParams.id).then((response) => response.data)

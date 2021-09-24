@@ -6,13 +6,13 @@
                     <h2>Cadastrar {{$ctrl.rule}}</h2>
                 </div>
                 <div class="content-person">
-                    <person-document person="$ctrl.entity"></person-document>
+                    <person-document entity="$ctrl.entity"></person-document>
                 </div>
                 <div class="content-person">
-                    <person-data emails="$ctrl.entity.emails" phones="$ctrl.entity.phones" entity="$ctrl.entity"></person-data>
+                    <person-data entity="$ctrl.entity" emails="$ctrl.entity.emails" phones="$ctrl.entity.phones"></person-data>
                 </div>
                 <div class="content-person">
-                    <person_location addresses="$ctrl.entity.addresses"></person_location>
+                    <person_location entity="$ctrl.entity" addresses="$ctrl.entity.addresses"></person_location>
                 </div>
                 <div class="button">
                     <button type="button" class="btn btn-dark" ng-click="$ctrl.save()">Salvar</button>

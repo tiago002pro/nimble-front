@@ -1,34 +1,21 @@
 import './person-documents.scss'
 import template from './person-documents.html'
 import { isNullOrUndefined } from '@uirouter/angularjs'
+import { Person } from '../../interfaces/person.interface'
 
 class PersonDocumentController {
-    private person
-    private pj: boolean
-    private pf: boolean
+    private entity: Person
     constructor() {}
 
     $onInit() {
-        this.pf = true
+        // console.log("entity2222222", this.entity);
         
-        // if (isNullOrUndefined(this.person.cpf)) {
-        //     this.pj = true
-        //     console.log("pj");
-            
-        // } else if (isNullOrUndefined(this.person.cnpj)) {
-        //     this.pf = true
-        //     console.log("pf");
-
-        // } else {
-        //     console.log("error");
-            
-        // }
     }
 }
 
 const personDocument = {
     bindings: {
-        person: '=',
+        entity: '=',
     },
     controller: PersonDocumentController,
     controllerAs: '$ctrl',

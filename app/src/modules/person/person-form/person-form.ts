@@ -1,4 +1,4 @@
-import { isNullOrUndefined, trimHashVal } from "@uirouter/core";
+import { isNullOrUndefined } from "@uirouter/core";
 import { ModalCardController, templateModal } from "../../kanban/kanban-board/components/modal-card/modal-card";
 import { PersonAddress } from "../interfaces/person.address.interface";
 import { PersonEmail } from "../interfaces/person.email.interface";
@@ -22,12 +22,15 @@ class PersonFormController {
 
     $onInit() {
         if (isNullOrUndefined(this.entity)) {
+            console.log("isnull");
             this.entity = {}
-            this.entity.addresses = []
-            this.entity.emails = []
-            this.entity.phones = []
+            this.entity.addresses = [{}]
+            this.entity.emails = [{}]
+            this.entity.phones = [{}]
             this.entity.documents = []
             
+        } else {
+            console.log("entity", this.entity);
         }
     }
 

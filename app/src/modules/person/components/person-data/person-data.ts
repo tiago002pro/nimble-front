@@ -6,25 +6,18 @@ import { Person } from '../../interfaces/person.interface'
 import { isNullOrUndefined } from '@uirouter/core'
 
 class PersonDataController {
-    private emails
-    private phones
-    private email: PersonEmail
-    private phone: PersonPhone
-    private entity
+    private emails: Array<PersonEmail>
+    private phones: Array<PersonPhone>
+    private entity: Person
     constructor() {}
 
     $onInit() {
-        if (isNullOrUndefined(this.entity)) {
-            console.log("vixi");
-            
-            this.email = {}
-            this.phone = {}
-            this.emails.push(this.email)
-            this.phones.push(this.phone)
-        } else {
-            
-            
-        }
+        console.log("11", this.entity);
+        console.log("email", this.emails);
+        console.log("phones", this.phones);
+        
+
+        // this.entity.emails = this.emails
     }
 }
 

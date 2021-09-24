@@ -8,4 +8,5 @@ export interface PersonAddress {
     location?: String,
     state?: String,
     country?: String,
+    addressPrimary?: Boolean,
 }

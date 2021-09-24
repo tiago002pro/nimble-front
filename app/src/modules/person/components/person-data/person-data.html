@@ -12,7 +12,7 @@
     <div class="col-md-4">
         <label class="input-label">Gênero</label>
         <div class="input-text">
-            <mgb-input-text input-value="$ctrl.person.gender"></mgb-input-text>
+            <mgb-input-text input-value="$ctrl.entity.gender"></mgb-input-text>
         </div>
     </div>
 </div>
@@ -33,14 +33,14 @@
 </div>
 <div class="row"
      style="margin-bottom: 20px;">
-    <div class="col-md-6">
+    <div class="col-md-6" ng-repeat="item in $ctrl.phones">
         <label class="input-label">Telefone</label>
-        <mgb-input-text input-value="$ctrl.phone.phone"></mgb-input-text>
+        <mgb-input-text input-value="item.phone"></mgb-input-text>
     </div>
     <div class="col-md-6">
         <label class="input-label">Email</label>
-        <div class="input-text">
-            <mgb-input-text input-value="$ctrl.email.email"></mgb-input-text>
+        <div class="input-text" ng-repeat="item in $ctrl.emails">
+            <mgb-input-text input-value="item.email"></mgb-input-text>
         </div>
     </div>
 </div>

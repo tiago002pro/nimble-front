@@ -4,12 +4,11 @@ import { PersonAddress } from '../../interfaces/person.address.interface'
 
 class PersonLocationController {
     private addresses
-    private address: PersonAddress
     constructor() {}
 
     $onInit() {
-        this.address = {}
-        // this.addresses.push(this.address)
+        console.log("addresses", this.addresses);
+        
     }
 }
 
