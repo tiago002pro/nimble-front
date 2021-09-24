@@ -3,6 +3,7 @@ import { PersonService } from "../services/person.service";
 class PersonListController {
     private listPerson: any
     private ruleTitle
+    private list
 
     constructor (
         public $scope,
@@ -12,7 +13,13 @@ class PersonListController {
     ) {}
 
     async $onInit() {
-        this.listPerson = await this.personService.getPersonList().then((response) => {return response.data})
+        this.list = await this.personService.getPersonList(0).then((response) => {return response.data})
+        console.log("this.list", this.list);
+
+
+        this.listPerson = this.list.content
+        console.log("this.listPerson", this.listPerson);
+        
 
         switch(this.rule) {
             case "Clientes": 
@@ -24,6 +31,17 @@ class PersonListController {
             default:
                 this.ruleTitle = "Funcionário"
         }
+    }
+
+    async teste(page) {
+        console.log("page", page);
+        
+        this.list = await this.personService.getPersonList(page).then((response) => {return response.data})
+        console.log("this.list", this.list);
+
+
+        this.listPerson = this.list.content
+        console.log("this.listPerson", this.listPerson);
     }
 }
 

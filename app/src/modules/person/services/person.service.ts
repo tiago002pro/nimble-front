@@ -12,8 +12,10 @@ class PersonService {
         return this.$http.post(`${this.url}/api/person-individual/form`, entity)
     }
 
-    getPersonList() {
-        return this.$http.get(`${this.url}/api/person/get/person-list`)
+    getPersonList(page) {
+        console.log("PAGE", page);
+        
+        return this.$http.get(`${this.url}/api/person/get/person-list/?page=${page}&size=5`)
     }
 
     getPersonListByRule(rule) {

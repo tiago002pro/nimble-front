@@ -30,6 +30,23 @@
             </tr>
           </tbody>
         </table>
+        <!-- <nav>
+          <ul class="pagination justify-content-center">
+            <li class="page-item" ng-repeat="x in [].constructor($ctrl.list.totalPages) track by $index"><a class="page-link" ng-click="$ctrl.teste($index+1)" >{{ $index+1 }}</a></li>
+          </ul>
+        </nav> -->
+
+        <div class="pagination justify-content-center">
+          <div class="pagination-arrow">
+            <i class="fas fa-angle-double-left"></i>
+          </div>
+          <div class="pagination-item" ng-repeat="x in [].constructor($ctrl.list.totalPages) track by $index">
+            <a ng-click="$ctrl.teste($index+1)">{{ $index+1 }}</a>
+          </div>
+          <div class="pagination-arrow">
+            <i class="fas fa-angle-double-right"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -16,6 +16,7 @@
 
     .content-title {
         margin-bottom: 20px;
+        font-family: 'Roboto Condensed', sans-serif;
     }
 
     .new-person-button {
@@ -28,6 +29,50 @@
     }
 
     .icon-edit a{
+        color: #343a40;
+    }
+   
+    .page-item a {
+        display: inline;
+        cursor: pointer;
+    }
+    
+    .page-link {
+        border-radius: 50px !important;
+        margin-left: 8px !important;
+    }
+
+    .pagination-item {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-left: 8px;
+        background: #343a40;
+        cursor: pointer;
+    }
+
+    .pagination-item a {
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .pagination-item a:hover {
+        text-decoration: none;
+    }
+
+    .pagination-arrow {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-left: 8px;
+        cursor: pointer;
+    }
+
+    .pagination-arrow i {
         color: #343a40;
     }
 }
