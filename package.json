@@ -4,7 +4,7 @@
   "description": "TCC",
   "scripts": {
     "dev": "webpack-dev-server --config app/config/webpack.config.dev.js --content-base dist",
-    "build": "webpack-dev-server --config app/config/webpack.config.dev.js --content-base dist -aot --prod",
+    "build": "webpack-dev-server --config app/config/webpack.config.dev.js --content-base dist --prod",
     "start": "node server.js"
   },
   "devDependencies": {
