@@ -31,6 +31,9 @@ class PersonListController {
             default:
                 this.ruleTitle = "Funcionário"
         }
+
+        console.log("ruleTitle", this.ruleTitle);
+        
     }
 
     async teste(page) {

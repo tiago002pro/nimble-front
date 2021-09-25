@@ -2,11 +2,8 @@ import './side-bar.scss'
 import template from './side-bar.html'
 
 class SidebarController {
-    private hide: boolean
     private showdropDowMenu1 = false
     private showdropDowMenu2 = false
-    private black = true
-    private white = false
     private showMenu: boolean
 
     constructor (

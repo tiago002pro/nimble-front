@@ -41,44 +41,27 @@ class PersonFormController {
     }
 
     save() {
-        console.log("SAVE");
         
         console.log("doc", this.document);
         
         console.log("Save Person", this.entity);
-        // try {
-        //     this.entity.ruleList = [{rule: this.rule}]
-        //     this.personService.createIndividual(this.entity)
-        //     swal({
-        //         title: "Cadastro realizado com sucesso!",
-        //         icon: "success",
-        //       });
-        //       history.back()
+        try {
+            this.entity.ruleList = [{rule: this.rule}]
+            this.personService.createIndividual(this.entity)
+            swal({
+                title: "Cadastro realizado com sucesso!",
+                icon: "success",
+              });
+              history.back()
             
-        // } catch(e) {
-        //     console.log("Error Save Person");
+        } catch(e) {
+            console.log("Error Save Person");
             
-        // }
-
+        }
     }
 
     back() {
         history.back()
-    }
-
-    personType(teste) {
-        console.log("5", teste);
-        
-        if (this.document.length == 11) {
-            console.log("CPF", this.document);
-            this.entity.cpf = this.document
-            
-        } else {
-            console.log("CNPJ", this.document);
-            this.entity.cnpj = this.document
-
-        }
-        
     }
 }
 

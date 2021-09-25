@@ -21,7 +21,7 @@ const personData = {
         emails: '=?',
         phones: '=?',
         entity: '=?',
-        typePerson: '=',
+        typePerson: '=?',
     },
     controller: PersonDataController,
     controllerAs: '$ctrl',

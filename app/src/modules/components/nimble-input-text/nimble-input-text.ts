@@ -1,7 +1,7 @@
-import './mgb-input-text.scss'
-import template from './mgb-input-text.html'
+import './nimble-input-text.scss'
+import template from './nimble-input-text.html'
 
-class MgbInputTextController {
+class NimbleInputTextController {
     private inputLabel: String
     private inputValue: String
     private ngModel: String
@@ -14,18 +14,17 @@ class MgbInputTextController {
     }
 }
 
-const mgbInputText = {
+const nimbleInputText = {
     bindings: {
         inputLabel: '=',
         inputValue:  '=',
         ngModel: '='
     },
-    controller: MgbInputTextController,
+    controller: NimbleInputTextController,
     controllerAs: '$ctrl',
     templateUrl: template
 }
 
-MgbInputTextController['$inject'] = [
-]
+NimbleInputTextController['$inject'] = []
 
-export { mgbInputText }
+export { nimbleInputText }

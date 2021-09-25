@@ -11,8 +11,6 @@ class PersonDocumentController {
     constructor() {}
 
     $onInit() {
-        // console.log("entity2222222", this.entity);
-
         console.log("document", this.document);
 
         if (this.document.length == 14) {
@@ -20,8 +18,6 @@ class PersonDocumentController {
         } else {
             this.typePerson = 'pf'
         }
-        
-        
     }
 }
 

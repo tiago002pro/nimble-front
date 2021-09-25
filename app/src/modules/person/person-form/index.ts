@@ -2,18 +2,18 @@ import * as angular from 'angular'
 import './person-form.scss'
 import { PersonFormController } from './person-form'
 import template from './person-form.html'
-import { mgbInputText } from '../../components/mgb-input-text/mgb-input-text'
-import { mgbInputNumber } from '../../components/mgb-input-number/mgb-input-number'
 import { personDocument } from '../components/person-documents/person-documents'
 import { personData } from '../components/person-data/person-data'
 import { personLocation } from '../components/person-location/person-location'
 import { PersonService } from '../services/person.service'
 import { nimbleInputCpfCnpj } from '../../components/nimble-input-cpfcnpj/nimble-input-cpfcnpj'
+import { nimbleInputText } from '../../components/nimble-input-text/nimble-input-text'
+import { nimbleInputNumber } from '../../components/nimble-input-number/nimble-input-number'
 
 const personFormMudule = angular
     .module('person-form', [])
-    .component('mgbInputText', mgbInputText)
-    .component('mgbInputNumber', mgbInputNumber)
+    .component('nimbleInputText', nimbleInputText)
+    .component('nimbleInputNumber', nimbleInputNumber)
     .component('nimbleInputCpfCnpj', nimbleInputCpfCnpj)
     .component('personDocument', personDocument)
     .component('personData', personData)
