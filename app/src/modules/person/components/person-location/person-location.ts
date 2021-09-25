@@ -7,8 +7,6 @@ class PersonLocationController {
     constructor() {}
 
     $onInit() {
-        console.log("addresses", this.addresses);
-        
     }
 }
 

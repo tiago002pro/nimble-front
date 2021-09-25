@@ -5,10 +5,22 @@ import { Person } from '../../interfaces/person.interface'
 
 class PersonDocumentController {
     private entity: Person
+    private document: String
+    private typePerson
+
     constructor() {}
 
     $onInit() {
         // console.log("entity2222222", this.entity);
+
+        console.log("document", this.document);
+
+        if (this.document.length == 14) {
+            this.typePerson = 'pj'
+        } else {
+            this.typePerson = 'pf'
+        }
+        
         
     }
 }
@@ -16,6 +28,8 @@ class PersonDocumentController {
 const personDocument = {
     bindings: {
         entity: '=',
+        document: '=',
+        typePerson: '=',
     },
     controller: PersonDocumentController,
     controllerAs: '$ctrl',

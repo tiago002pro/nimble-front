@@ -12,6 +12,7 @@ class PersonFormController {
     private inputValue: String
     private label: String
     private document: String
+    private typePerson = 'pf'
 
     constructor (
         public $scope,
@@ -34,25 +35,30 @@ class PersonFormController {
         } else {
             console.log("entity", this.entity);
         }
+
+        this.document = '09760289997'
+        // this.document = '12930951000149'
     }
 
     save() {
+        console.log("SAVE");
+        
         console.log("doc", this.document);
         
-        try {
-            console.log("Save Person", this.entity);
-            this.entity.ruleList = [{rule: this.rule}]
-            this.personService.createIndividual(this.entity)
-            swal({
-                title: "Cadastro realizado com sucesso!",
-                icon: "success",
-              });
-              history.back()
+        console.log("Save Person", this.entity);
+        // try {
+        //     this.entity.ruleList = [{rule: this.rule}]
+        //     this.personService.createIndividual(this.entity)
+        //     swal({
+        //         title: "Cadastro realizado com sucesso!",
+        //         icon: "success",
+        //       });
+        //       history.back()
             
-        } catch(e) {
-            console.log("Error Save Person");
+        // } catch(e) {
+        //     console.log("Error Save Person");
             
-        }
+        // }
 
     }
 

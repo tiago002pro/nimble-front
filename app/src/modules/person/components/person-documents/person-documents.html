@@ -7,15 +7,16 @@
      style="margin-bottom: 20px;">
     <div class="col-md-4">
         <label class="input-label">CPF ou CNPJ</label>
-        <mgb-input-text input-value="$ctrl.entity.cpf"></mgb-input-text>
+        <nimble-input-cpf-cnpj ng-model="$ctrl.document"></nimble-input-cpf-cnpj>
+        <!-- <mgb-input-text input-value="$ctrl.entity.cpf"></mgb-input-text> -->
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3" ng-if="$ctrl.typePerson == 'pf'">
         <label class="input-label">RG</label>
         <div class="input-text">
             <mgb-input-text input-value="$ctrl.entity.rg"></mgb-input-text>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3" ng-if="$ctrl.typePerson == 'pj'">
         <label class="input-label">IE</label>
         <div class="input-text">
             <mgb-input-text input-value="$ctrl.entity.ie"></mgb-input-text>

@@ -2,24 +2,35 @@
     .board-form {
         width: 100vw;
         height: 100vh;
-        padding: 10px 10px 10px 10px;
+        padding: 30px;
         display: inline-flex;
         background-size: contain;
         color: #000 !important;
+        font-family: 'Roboto Condensed', sans-serif;
     }
     
     .content-area {
         background-color: #FFF;
-        padding: 50px;
+        padding: 20px;
         z-index: auto;
     }
 
     .content-title {
-        margin-bottom: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
     }
 
     .content-form {
         width: 80vw;
+        display: flex;
+        // background-color: aqua;
+    }
+
+    .content-data-left {
+        width: 60vw;
+        padding: 40px 80px 40px 80px;
+
+        // background-color: blue;
     }
     
     .content-person {
@@ -36,7 +47,6 @@
         width: 200px;
         height: 50px;
         font-size: 24px;
-        margin-top: 10px;
     }
     @media (max-width: 900px) {
         .content-area {
@@ -47,5 +57,20 @@
     .button-back {
         margin-top: 10px;
         cursor: pointer;
+    }
+
+    .content-data-right {
+        width: 20vw;
+        padding-right: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .person-image {
+        width: 16vw;
+        height: 30vh;
+        background: url(https://firebasestorage.googleapis.com/v0/b/nimble-dcb73.appspot.com/o/brooklyn_nine_nine1.jpg_399056758.jpg?alt=media&token=7d192c2b-7c31-4937-8b1b-a5abfc7becb0);
+        border-radius: 50%;
+        // border: 1px solid #000;
     }
 }

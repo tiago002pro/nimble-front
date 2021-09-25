@@ -9,15 +9,10 @@ class PersonDataController {
     private emails: Array<PersonEmail>
     private phones: Array<PersonPhone>
     private entity: Person
+    private typePerson
     constructor() {}
 
     $onInit() {
-        console.log("11", this.entity);
-        console.log("email", this.emails);
-        console.log("phones", this.phones);
-        
-
-        // this.entity.emails = this.emails
     }
 }
 
@@ -26,6 +21,7 @@ const personData = {
         emails: '=?',
         phones: '=?',
         entity: '=?',
+        typePerson: '=',
     },
     controller: PersonDataController,
     controllerAs: '$ctrl',

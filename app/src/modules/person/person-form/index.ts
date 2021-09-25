@@ -8,11 +8,13 @@ import { personDocument } from '../components/person-documents/person-documents'
 import { personData } from '../components/person-data/person-data'
 import { personLocation } from '../components/person-location/person-location'
 import { PersonService } from '../services/person.service'
+import { nimbleInputCpfCnpj } from '../../components/nimble-input-cpfcnpj/nimble-input-cpfcnpj'
 
 const personFormMudule = angular
     .module('person-form', [])
     .component('mgbInputText', mgbInputText)
     .component('mgbInputNumber', mgbInputNumber)
+    .component('nimbleInputCpfCnpj', nimbleInputCpfCnpj)
     .component('personDocument', personDocument)
     .component('personData', personData)
     .component('personLocation', personLocation)
