@@ -2,8 +2,9 @@
     <input type="text"
         style="width: 100%;"
         ng-model="$ctrl.ngModel"
-        ng-chage="$ctrl.onChange()"
+        ng-change="$ctrl.onChange()"
         placeholder=""
         maxlength="18"
+        ng-model-options = "{allowInvalid: true}"
         ui-br-cpfcnpj-mask>
 </div>

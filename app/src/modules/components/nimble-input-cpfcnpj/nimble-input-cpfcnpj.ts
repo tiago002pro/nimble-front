@@ -3,6 +3,7 @@ import template from './nimble-input-cpfcnpj.html'
 
 class NimbleInputCpfCnpjController {
     private ngModel
+    private phone
     constructor () {}
 
     $onInit() {
@@ -12,6 +13,7 @@ class NimbleInputCpfCnpjController {
 
     onChange() {
         console.log("ngModel", this.ngModel)
+        console.log("phone", this.phone)
     }
 }
 

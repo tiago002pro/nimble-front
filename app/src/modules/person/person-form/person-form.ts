@@ -36,15 +36,10 @@ class PersonFormController {
             console.log("entity", this.entity);
         }
 
-        this.document = '09760289997'
-        // this.document = '12930951000149'
     }
 
     save() {
-        
-        console.log("doc", this.document);
-        
-        console.log("Save Person", this.entity);
+        this.verifyDocument()
         try {
             this.entity.ruleList = [{rule: this.rule}]
             this.personService.createIndividual(this.entity)
@@ -62,6 +57,16 @@ class PersonFormController {
 
     back() {
         history.back()
+    }
+
+    verifyDocument() {
+        if (this.document.length == 14) {
+            // this.typePerson = 'pj'
+            this.entity.cnpj = this.document
+        } else {
+            // this.typePerson = 'pf'
+            this.entity.cpf = this.document
+        }
     }
 }
 
