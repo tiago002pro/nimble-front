@@ -3,23 +3,28 @@ import template from './nimble-input-cpfcnpj.html'
 
 class NimbleInputCpfCnpjController {
     private ngModel
-    private phone
+    private typePerson
+    private entity
+
     constructor () {}
 
     $onInit() {
-        console.log("ngModel", this.ngModel)
-
     }
 
     onChange() {
-        console.log("ngModel", this.ngModel)
-        console.log("phone", this.phone)
+        if (this.ngModel.length == 14) {
+            this.typePerson = 'pj'
+        } else {
+            this.typePerson = 'pf'
+        }
     }
 }
 
 const nimbleInputCpfCnpj = {
     bindings: {
-        ngModel: '=?'
+        ngModel: '=?',
+        typePerson: '=?',
+        entity: '=?',
     },
     controller: NimbleInputCpfCnpjController,
     controllerAs: '$ctrl',

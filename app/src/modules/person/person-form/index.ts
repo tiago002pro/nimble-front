@@ -9,12 +9,14 @@ import { PersonService } from '../services/person.service'
 import { nimbleInputCpfCnpj } from '../../components/nimble-input-cpfcnpj/nimble-input-cpfcnpj'
 import { nimbleInputText } from '../../components/nimble-input-text/nimble-input-text'
 import { nimbleInputNumber } from '../../components/nimble-input-number/nimble-input-number'
+import { nimbleInputDate } from '../../components/nimble-input-date/nimble-input-date'
 
 const personFormMudule = angular
     .module('person-form', [])
     .component('nimbleInputText', nimbleInputText)
     .component('nimbleInputNumber', nimbleInputNumber)
     .component('nimbleInputCpfCnpj', nimbleInputCpfCnpj)
+    .component('nimbleInputDate', nimbleInputDate)
     .component('personDocument', personDocument)
     .component('personData', personData)
     .component('personLocation', personLocation)

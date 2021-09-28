@@ -4,8 +4,8 @@ class PersonService {
         private $http,
     ) {}
 
-    createJuridicalPerson() {
-        return this.$http.post(`${this.url}/api/person-juridica/form`)
+    createJuridicalPerson(entity) {
+        return this.$http.post(`${this.url}/api/person-juridica/form`, entity)
     }
 
     createIndividual(entity)  {
@@ -15,7 +15,7 @@ class PersonService {
     getPersonList(page) {
         console.log("PAGE", page);
         
-        return this.$http.get(`${this.url}/api/person/get/person-list/?page=${page}&size=5`)
+        return this.$http.get(`${this.url}/api/person/get/person-list/?page=${page}&size=100`)
     }
 
     getPersonListByRule(rule) {
@@ -24,6 +24,10 @@ class PersonService {
 
     loadById(id) {
         return this.$http.get(`${this.url}/api/person/${id}`)
+    }
+
+    deleteById(id) {
+        this.$http.delete(`${this.url}/api/person/delete/${id}`)
     }
 }
 

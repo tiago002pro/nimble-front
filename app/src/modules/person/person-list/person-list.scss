@@ -13,6 +13,7 @@
         background-color: #FFF;
         padding: 50px;
         z-index: auto;
+        overflow-y: auto;
     }
 
     .content-title {
@@ -30,6 +31,13 @@
 
     .icon-edit a{
         color: #343a40;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    .icon-edit i {
+        margin-left: 12px;
     }
    
     .page-item a {

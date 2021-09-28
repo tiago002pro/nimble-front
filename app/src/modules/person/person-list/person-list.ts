@@ -14,12 +14,8 @@ class PersonListController {
 
     async $onInit() {
         this.list = await this.personService.getPersonList(0).then((response) => {return response.data})
-        console.log("this.list", this.list);
-
 
         this.listPerson = this.list.content
-        console.log("this.listPerson", this.listPerson);
-        
 
         switch(this.rule) {
             case "Clientes": 
@@ -32,19 +28,16 @@ class PersonListController {
                 this.ruleTitle = "Funcionário"
         }
 
-        console.log("ruleTitle", this.ruleTitle);
-        
     }
 
     async teste(page) {
-        console.log("page", page);
-        
         this.list = await this.personService.getPersonList(page).then((response) => {return response.data})
-        console.log("this.list", this.list);
-
-
         this.listPerson = this.list.content
-        console.log("this.listPerson", this.listPerson);
+    }
+
+    deletePersonById(id) {
+        this.personService.deleteById(id)
+        location.reload()
     }
 }
 

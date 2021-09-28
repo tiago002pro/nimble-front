@@ -32,26 +32,26 @@ class PersonFormController {
             this.entity.documents = []
             this.entity.ruleList = [{}]
             
-        } else {
-            console.log("entity", this.entity);
-        }
-
+        } 
     }
 
     save() {
         this.verifyDocument()
         try {
             this.entity.ruleList = [{rule: this.rule}]
-            this.personService.createIndividual(this.entity)
+            if (this.typePerson == 'pf') {
+                this.personService.createIndividual(this.entity)
+            } else {
+                this.personService.createJuridicalPerson(this.entity)
+            }
             swal({
                 title: "Cadastro realizado com sucesso!",
                 icon: "success",
-              });
-              history.back()
+            });
+            history.back()
             
         } catch(e) {
             console.log("Error Save Person");
-            
         }
     }
 
@@ -61,10 +61,8 @@ class PersonFormController {
 
     verifyDocument() {
         if (this.document.length == 14) {
-            // this.typePerson = 'pj'
             this.entity.cnpj = this.document
         } else {
-            // this.typePerson = 'pf'
             this.entity.cpf = this.document
         }
     }

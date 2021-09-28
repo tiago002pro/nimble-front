@@ -17,6 +17,7 @@
               <th scope="col">Data de nasc/fund</th>
               <th scope="col">CPF/CNPJ</th>
               <th scope="col">Editar</th>
+              <th scope="col">Excluir</th>
             </tr>
           </thead>
           <tbody>
@@ -24,9 +25,10 @@
               <th scope="row">{{person.id}}</th>
               <td>{{person.name}}</td>
               <td>{{person.ruleList[0].rule}}</td>
-              <td>{{person.dateofbirthorfondation}}</td>
-              <td>{{person.cpf}}</td>
+              <td>{{person.dateofbirthorfondation | date }}</td>
+              <td>{{person.cpf}}{{person.cnpj}}</td>
               <td class="icon-edit"><a ui-sref="app.person-edit({rule: $ctrl.rule, id: person.id})"><i class="fas fa-edit"></i></a></i></td>
+              <td class="icon-edit"><a ng-click="$ctrl.deletePersonById(person.id)"><i class="far fa-trash-alt"></i></a></i></td>
             </tr>
           </tbody>
         </table>
