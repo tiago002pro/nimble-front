@@ -1,55 +1,54 @@
 <div class="person-list">
-  <div class="board-list">
-    <div class="content-area">
-      <div class="content-title">
-        <h2>Lista de {{$ctrl.rule}}</h2>
-      </div>
-      <div class="new-person-button">
-        <button type="button" class="btn btn-primary" ui-sref="app.person-form({rule: $ctrl.rule})">Novo {{$ctrl.ruleTitle}}</button>
-      </div>
-      <div class="table">
-        <table class="table table-striped">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Tipo</th>
-              <th scope="col">Data de nasc/fund</th>
-              <th scope="col">CPF/CNPJ</th>
-              <th scope="col">Editar</th>
-              <th scope="col">Excluir</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="person in $ctrl.listPerson">
-              <th scope="row">{{person.id}}</th>
-              <td>{{person.name}}</td>
-              <td>{{person.ruleList[0].rule}}</td>
-              <td>{{person.dateofbirthorfondation | date }}</td>
-              <td>{{person.cpf}}{{person.cnpj}}</td>
-              <td class="icon-edit"><a ui-sref="app.person-edit({rule: $ctrl.rule, id: person.id})"><i class="fas fa-edit"></i></a></i></td>
-              <td class="icon-edit"><a ng-click="$ctrl.deletePersonById(person.id)"><i class="far fa-trash-alt"></i></a></i></td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- <nav>
-          <ul class="pagination justify-content-center">
-            <li class="page-item" ng-repeat="x in [].constructor($ctrl.list.totalPages) track by $index"><a class="page-link" ng-click="$ctrl.teste($index+1)" >{{ $index+1 }}</a></li>
-          </ul>
-        </nav> -->
-
-        <div class="pagination justify-content-center">
-          <div class="pagination-arrow">
-            <i class="fas fa-angle-double-left"></i>
-          </div>
-          <div class="pagination-item" ng-repeat="x in [].constructor($ctrl.list.totalPages) track by $index">
-            <a ng-click="$ctrl.teste($index+1)">{{ $index+1 }}</a>
-          </div>
-          <div class="pagination-arrow">
-            <i class="fas fa-angle-double-right"></i>
-          </div>
+    <div class="board-list">
+        <div class="content-area">
+            <div class="content-title">
+                <h2>Lista de {{$ctrl.rule}}</h2>
+            </div>
+            <div class="new-person-button">
+                <button type="button" class="btn btn-primary" ui-sref="app.person-form({rule: $ctrl.rule})">Novo
+					{{$ctrl.ruleTitle}}</button>
+            </div>
+            <div class="table">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Data de Nasc/Fund</th>
+                            <th scope="col">CPF/CNPJ</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="person in $ctrl.listPerson">
+                            <th scope="row">{{person.id}}</th>
+                            <td>{{person.name}}</td>
+                            <td>{{person.ruleList[0].rule}}</td>
+                            <td>{{person.dateofbirthorfondation | date:"MM/dd/yyyy"}}</td>
+                            <td>{{person.cpf}}{{person.cnpj}}</td>
+                            <td class="icon-edit"><a ui-sref="app.person-edit({rule: $ctrl.rule, id: person.id})"><i
+										class="fas fa-edit"></i></a></i>
+                            </td>
+                            <td class="icon-edit"><a ng-click="$ctrl.deletePersonById(person.id)"><i
+										class="far fa-trash-alt"></i></a></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination justify-content-center">
+                    <div class="pagination-arrow">
+                        <i class="fas fa-angle-double-left"></i>
+                    </div>
+                    <div class="pagination-item" ng-repeat="x in [].constructor($ctrl.list.totalPages) track by $index">
+                        <a ng-click="$ctrl.teste($index+1)">{{ $index+1 }}</a>
+                    </div>
+                    <div class="pagination-arrow">
+                        <i class="fas fa-angle-double-right"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

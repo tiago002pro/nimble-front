@@ -1,7 +1,7 @@
-import './nimble-input-date.scss'
-import template from './nimble-input-date.html'
+import './nimble-input-cep.scss'
+import template from './nimble-input-cep.html'
 
-class NimbleInputDateController {
+class NimbleInputCepController {
     private inputLabel: String
     private inputValue: String
     private ngModel: String
@@ -15,18 +15,18 @@ class NimbleInputDateController {
     }
 }
 
-const nimbleInputDate = {
+const nimbleInputCep = {
     bindings: {
         inputLabel: '=',
         inputValue:  '=',
         ngModel: '=',
         placeholder: '=?',
     },
-    controller: NimbleInputDateController,
+    controller: NimbleInputCepController,
     controllerAs: '$ctrl',
     templateUrl: template
 }
 
-NimbleInputDateController['$inject'] = []
+NimbleInputCepController['$inject'] = []
 
-export { nimbleInputDate }
+export { nimbleInputCep }

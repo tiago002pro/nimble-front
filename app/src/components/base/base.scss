@@ -67,3 +67,17 @@ html {
 .fade:not(.show) {
   opacity: 1 !important;
 }
+
+//placeholder
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  font-style: italic;  
+}
+::-moz-placeholder {
+  font-style: italic;  
+}
+:-ms-input-placeholder {  
+  font-style: italic; 
+}

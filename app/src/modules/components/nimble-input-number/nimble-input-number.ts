@@ -4,6 +4,7 @@ import template from './nimble-input-number.html'
 class NimbleInpuNumberController {
     private inputLabel: String
     private inputValue: String
+    private placeholder: String
 
     constructor (
     ) {}
@@ -16,6 +17,7 @@ const nimbleInputNumber = {
     bindings: {
         inputLabel: '=',
         inputValue:  '=',
+        placeholder: '=?',
     },
     controller: NimbleInpuNumberController,
     controllerAs: '$ctrl',

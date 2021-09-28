@@ -5,6 +5,7 @@ class NimbleInputTextController {
     private inputLabel: String
     private inputValue: String
     private ngModel: String
+    private placeholder: String
 
     constructor (
     ) {}
@@ -18,7 +19,8 @@ const nimbleInputText = {
     bindings: {
         inputLabel: '=',
         inputValue:  '=',
-        ngModel: '='
+        ngModel: '=',
+        placeholder: '=?',
     },
     controller: NimbleInputTextController,
     controllerAs: '$ctrl',

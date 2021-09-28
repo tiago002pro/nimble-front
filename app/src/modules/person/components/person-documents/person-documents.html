@@ -1,37 +1,38 @@
-<div class="row">
-    <div class="col-md-12">
-        <h4>Documentos</h4>
-    </div>
-</div>
-<div class="row"
-     style="margin-bottom: 20px;">
-    <div class="col-md-3">
-        <label class="input-label">CPF ou CNPJ</label>
-        <nimble-input-cpf-cnpj ng-model="$ctrl.document" type-person="$ctrl.typePerson" entity="$ctrl.entity"></nimble-input-cpf-cnpj>
-        <!-- <nimble-input-text input-value="$ctrl.entity.cpf"></nimble-input-text> -->
-    </div>
-    <div class="col-md-3" ng-if="$ctrl.typePerson == 'pf'">
-        <label class="input-label">RG</label>
-        <div class="input-text">
-            <nimble-input-text input-value="$ctrl.entity.rg"></nimble-input-text>
+<div class="person-document">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Documentos</h4>
         </div>
     </div>
-    <div class="col-md-3" ng-if="$ctrl.typePerson == 'pj'">
-        <label class="input-label">IE</label>
-        <div class="input-text">
-            <nimble-input-text input-value="$ctrl.entity.ie"></nimble-input-text>
+    <div class="row box">
+        <div class="col-md-3">
+            <label class="input-label">CPF ou CNPJ</label>
+            <nimble-input-cpf-cnpj ng-model="$ctrl.document" type-person="$ctrl.typePerson" entity="$ctrl.entity"></nimble-input-cpf-cnpj>
+            <!-- <nimble-input-text input-value="$ctrl.entity.cpf"></nimble-input-text> -->
         </div>
-    </div>
-    <div class="col-md-3" ng-if="$ctrl.typePerson == 'pf'">
-        <label class="input-label">Data de Nascimento</label>
-        <div class="input-text" >
-            <nimble-input-date input-value="$ctrl.entity.dateofbirthorfondation"></nimble-input-date>
+        <div class="col-md-3" ng-if="$ctrl.typePerson == 'pf'">
+            <label class="input-label">RG</label>
+            <div class="input-text">
+                <nimble-input-text input-value="$ctrl.entity.rg"></nimble-input-text>
+            </div>
         </div>
-    </div>
-    <div class="col-md-3" ng-if="$ctrl.typePerson == 'pj'">
-        <label class="input-label">Data de Fundação</label>
-        <div class="input-text">
-            <nimble-input-date input-value="$ctrl.entity.dateofbirthorfondation"></nimble-input-date>
+        <div class="col-md-3" ng-if="$ctrl.typePerson == 'pj'">
+            <label class="input-label">IE</label>
+            <div class="input-text">
+                <nimble-input-text input-value="$ctrl.entity.ie"></nimble-input-text>
+            </div>
+        </div>
+        <div class="col-md-3" ng-if="$ctrl.typePerson == 'pf'">
+            <label class="input-label">Data de Nascimento</label>
+            <div class="input-text" >
+                <nimble-input-date input-value="$ctrl.entity.dateofbirthorfondation" placeholder="'Ex.: 22/09/2021'"></nimble-input-date>
+            </div>
+        </div>
+        <div class="col-md-3" ng-if="$ctrl.typePerson == 'pj'">
+            <label class="input-label">Data de Fundação</label>
+            <div class="input-text">
+                <nimble-input-date input-value="$ctrl.entity.dateofbirthorfondation" placeholder="'Ex.: 22/09/2021'"></nimble-input-date>
+            </div>
         </div>
     </div>
 </div>

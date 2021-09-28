@@ -1,63 +1,62 @@
-<div class="row">
-    <div class="col-md-12">
-        <h4>Endereços</h4>
-    </div>
-</div>
-<div ng-repeat="item in $ctrl.addresses">
-    <div class="row"
-         style="margin-bottom: 20px;">
-        <div class="col-md-3" >
-            <label class="input-label">CEP</label>
-            <nimble-input-text input-value="item.zipCode"></nimble-input-text>
-        </div>
-        <div class="col-md-7">
-            <label class="input-label">Logradouro</label>
-            <div class="input-text">
-                <nimble-input-text input-value="item.premisse"></nimble-input-text>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <label class="input-label">Número</label>
-            <div class="input-text">
-                <nimble-input-text input-value="item.number"></nimble-input-text>
-            </div>
+<div class="person-location">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Endereços</h4>
         </div>
     </div>
-    <div class="row"
-         style="margin-bottom: 20px;">
-        <div class="col-md-7">
-            <label class="input-label">Bairro</label>
-            <div class="input-text">
-                <nimble-input-text input-value="item.neighbourhood"></nimble-input-text>
+    <div ng-repeat="item in $ctrl.addresses">
+        <div class="row box">
+            <div class="col-md-3" >
+                <label class="input-label">CEP</label>
+                <nimble-input-cep input-value="item.zipCode" placeholder="'Ex.: 99999-999'"></nimble-input-cep>
+            </div>
+            <div class="col-md-7">
+                <label class="input-label">Logradouro</label>
+                <div class="input-text">
+                    <nimble-input-text input-value="item.premisse" placeholder="'Ex.: Av Tiradentes'"></nimble-input-text>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label class="input-label">Número</label>
+                <div class="input-text">
+                    <nimble-input-text input-value="item.number" placeholder="'Ex.: 778'"></nimble-input-text>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <label class="input-label">Cidade</label>
-            <div class="input-text">
-                <nimble-input-text input-value="item.location"></nimble-input-text>
+        <div class="row box">
+            <div class="col-md-7">
+                <label class="input-label">Bairro</label>
+                <div class="input-text">
+                    <nimble-input-text input-value="item.neighbourhood" placeholder="'Ex.: Zona 1'"></nimble-input-text>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="input-label">Cidade</label>
+                <div class="input-text">
+                    <nimble-input-text input-value="item.location" placeholder="'Ex.: Maringá'"></nimble-input-text>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label class="input-label">Estado</label>
+                <div class="input-text">
+                    <nimble-input-text input-value="item.state" placeholder="'Ex.: Paraná'"></nimble-input-text>
+                </div>
             </div>
         </div>
-        <div class="col-md-2">
-            <label class="input-label">Estado</label>
-            <div class="input-text">
-                <nimble-input-text input-value="item.state"></nimble-input-text>
+        <div class="row box">
+            <div class="col-md-9">
+                <label class="input-label">Complemento</label>
+                <div class="input-text">
+                    <nimble-input-text input-value="item.information" placeholder="'Ex.: Mercado X'"></nimble-input-text>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="input-label">País</label>
+                <div class="input-text">
+                    <nimble-input-text input-value="item.country" placeholder="'Ex.: Brasil'"></nimble-input-text>
+                </div>
             </div>
         </div>
+    
     </div>
-    <div class="row"
-         style="margin-bottom: 20px;">
-        <div class="col-md-9">
-            <label class="input-label">Complemento</label>
-            <div class="input-text">
-                <nimble-input-text input-value="item.information"></nimble-input-text>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <label class="input-label">País</label>
-            <div class="input-text">
-                <nimble-input-text input-value="item.country"></nimble-input-text>
-            </div>
-        </div>
-    </div>
-
 </div>

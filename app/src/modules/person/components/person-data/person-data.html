@@ -5,57 +5,42 @@
         </div>
     </div>
     <div class="row box">
-         <div class="col-md-6" ng-if="$ctrl.typePerson == 'pj'">
+        <div class="col-md-6" ng-if="$ctrl.typePerson == 'pj'">
             <label class="input-label">Razão Social</label>
-            <nimble-input-text input-value="$ctrl.entity.name"></nimble-input-text>
+            <nimble-input-text input-value="$ctrl.entity.name" placeholder="'Ex.: Nimble Sistemas'"></nimble-input-text>
         </div>
         <div class="col-md-6" ng-if="$ctrl.typePerson == 'pj'">
             <label class="input-label">Nome Fantasia</label>
             <div class="input-text">
-                <nimble-input-text input-value="$ctrl.entity.gender"></nimble-input-text>
+                <nimble-input-text input-value="$ctrl.entity.gender" placeholder="'Ex.: Nimble LTDA'"></nimble-input-text>
             </div>
         </div>
-    
+
         <div class="col-md-6" ng-if="$ctrl.typePerson == 'pf'">
             <label class="input-label">Nome</label>
-            <nimble-input-text input-value="$ctrl.entity.name"></nimble-input-text>
+            <nimble-input-text input-value="$ctrl.entity.name" placeholder="'Ex.: Tiago Oliveira Barbosa'"></nimble-input-text>
         </div>
         <div class="col-md-3" ng-if="$ctrl.typePerson == 'pf'">
             <label class="input-label">Gênero</label>
             <div class="input-text">
-                <nimble-input-text input-value="$ctrl.entity.gender"></nimble-input-text>
+                <nimble-input-text input-value="$ctrl.entity.gender" placeholder="'Ex.: Masculino'"></nimble-input-text>
             </div>
         </div>
     </div>
-    <!-- <div class="row"
-         style="margin-bottom: 20px;">
-        <div class="col-md-2">
-            <label class="input-label">Dia</label>
-            <nimble-input-text input-value="'22'"></nimble-input-text>
-        </div>
-        <div class="col-md-2">
-            <label class="input-label">Mês</label>
-            <nimble-input-text input-value="'09'"></nimble-input-text>
-        </div>
-        <div class="col-md-2">
-            <label class="input-label">Ano</label>
-            <nimble-input-text input-value="'1996'"></nimble-input-text>
-        </div>
-    </div> -->
     <div class="row box">
         <div class="col-md-6">
             <label class="input-label">Email</label>
             <div class="input-text" ng-repeat="item in $ctrl.emails">
-                <nimble-input-text input-value="item.email"></nimble-input-text>
+                <nimble-input-text input-value="item.email" placeholder="'Ex.: email@outlook.com'"></nimble-input-text>
             </div>
         </div>
         <div class="col-md-3" ng-repeat="item in $ctrl.phones">
             <label class="input-label">Telefone</label>
-            <nimble-input-text input-value="item.phone"></nimble-input-text>
+            <nimble-input-phone input-value="item.phone" placeholder="'Ex.: +55 (44) 95555-4444'"></nimble-input-phone>
         </div>
         <div class="col-md-3">
             <label class="input-label">Tipo</label>
-            <nimble-input-text input-value="item.phone"></nimble-input-text>
+            <nimble-input-text input-value="item.phone" placeholder="'Ex.: Celular'"></nimble-input-text>
         </div>
     </div>
 </div>

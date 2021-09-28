@@ -10,6 +10,7 @@ class PersonDataController {
     private phones: Array<PersonPhone>
     private entity: Person
     private typePerson
+    
     constructor() {}
 
     $onInit() {

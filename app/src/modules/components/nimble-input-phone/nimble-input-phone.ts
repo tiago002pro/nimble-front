@@ -1,11 +1,11 @@
-import './nimble-input-date.scss'
-import template from './nimble-input-date.html'
+import './nimble-input-phone.scss'
+import template from './nimble-input-phone.html'
 
-class NimbleInputDateController {
+class NimbleInputPhoneController {
     private inputLabel: String
     private inputValue: String
     private ngModel: String
-    private placeholder: String
+    private placeholder
 
     constructor (
     ) {}
@@ -15,18 +15,18 @@ class NimbleInputDateController {
     }
 }
 
-const nimbleInputDate = {
+const nimbleInputPhone = {
     bindings: {
         inputLabel: '=',
         inputValue:  '=',
         ngModel: '=',
         placeholder: '=?',
     },
-    controller: NimbleInputDateController,
+    controller: NimbleInputPhoneController,
     controllerAs: '$ctrl',
     templateUrl: template
 }
 
-NimbleInputDateController['$inject'] = []
+NimbleInputPhoneController['$inject'] = []
 
-export { nimbleInputDate }
+export { nimbleInputPhone }
