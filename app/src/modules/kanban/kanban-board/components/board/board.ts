@@ -27,6 +27,12 @@ class BoardController {
         })
         return modalInstance.result
     }
+
+    newCard(column) {
+        console.log("column", column);
+        
+        column.cards.push({id: 5, title: 'Deu?', description: 'AAAAAAAA', status: 'red'})
+    }
 }
 
 const board = {

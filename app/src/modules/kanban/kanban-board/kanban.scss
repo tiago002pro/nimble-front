@@ -1,18 +1,19 @@
 .kanban-frame {
-    // background: url("https://images8.alphacoders.com/105/1054256.jpg");
-    // background-size: 1920px;
     background-color: #97979704;
-
+    margin-left: 10px;
     .frame-zone {
         width: 100vw;
         height: 100vh;
-        padding: 10px 10px 10px 10px;
         display: inline-flex;
         background-size: contain;
         color: #000 !important;
-        overflow: scroll;
+        font-family: 'Roboto Condensed', sans-serif;
     }
-    .frame {
+    .frame-zone {
+        z-index: auto;
+        width: 85vw;
+        display: flex;
+        overflow-x: scroll;
     }
     .boards {
         height: 40px;
@@ -20,7 +21,7 @@
         display: flex;
     }
     .board {
-        margin:  0 10px;
+        margin: 0 10px;
         border-radius: 3px;
         background: rgba(129, 129, 129, 0.199);
         border: 1px solid #FD951F11;

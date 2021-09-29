@@ -1,13 +1,12 @@
 <div class="kanban-frame">
     <div class="frame-zone">
-        <div class="frame"
-             ng-repeat="column in $ctrl.columns">
+        <div class="frame" ng-repeat="column in $ctrl.columns">
             <board column="column"></board>
         </div>
         <div class="boards">
             <div class="board">
                 <div class="new-board">
-                    <a href="">
+                    <a ng-click="$ctrl.newList()">
                         <i class='bx bx-plus'></i>
                         <div>Nova Lista</div>
                     </a>

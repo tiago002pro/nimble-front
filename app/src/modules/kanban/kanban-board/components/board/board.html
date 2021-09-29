@@ -3,12 +3,10 @@
         <div class="board">
             <div class="text-area">{{ $ctrl.column.title }}</div>
             <div class="dropzone">
-                <card ng-repeat="card in $ctrl.column.cards"
-                      card="card"
-                      ng-click="$ctrl.open(card)"></card>
+                <card ng-repeat="card in $ctrl.column.cards" card="card" ng-click="$ctrl.open(card)"></card>
             </div>
             <div class="new-card">
-                <a href="">
+                <a ng-click="$ctrl.newCard($ctrl.column)">
                     <div class="final-board">
                         <i class='bx bx-plus'></i>
                         <div>Novo Card</div>
