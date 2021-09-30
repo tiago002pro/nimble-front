@@ -29,6 +29,7 @@ class PersonListController {
 
     async getListPerson(page) {
         this.list = await this.personService.getPersonListByRule(this.rule, page).then((response) => {return response.data})
+        console.log("->", this.list);
         this.listPerson = this.list.content
     }
 

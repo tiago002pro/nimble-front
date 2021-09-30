@@ -5,7 +5,7 @@
         display: flex;
     }
     .board {
-        margin:  0 10px;
+        margin: 0 10px;
         border-radius: 3px;
         background: #ebecf0;
         border: 1px solid #FD951F11;
@@ -21,10 +21,9 @@
     .dropzone {
         overflow-y: auto;
         max-height: 77vh;
-    } 
+    }
     .new-card a {
         text-decoration: none;
-
     }
     .final-board {
         width: 260px;
@@ -46,5 +45,4 @@
         background-color: #ced2df;
         color: #131313;
     }
-
 }

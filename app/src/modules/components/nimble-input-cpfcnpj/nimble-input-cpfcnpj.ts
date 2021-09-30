@@ -3,7 +3,7 @@ import template from './nimble-input-cpfcnpj.html'
 
 class NimbleInputCpfCnpjController {
     private ngModel
-    private typePerson
+    private typePerson: String
     private entity
 
     constructor () {}

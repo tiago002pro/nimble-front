@@ -46,7 +46,7 @@
                             </div>
                         </a>
                     </div>
-                    <div ng-class="$ctrl.list.number==$ctrl.list.totalPages-1 ? 'pagination-arrow limite' : 'pagination-arrow'">
+                    <div ng-class="$ctrl.list.number==$ctrl.list.totalPages-1 || $ctrl.list.totalElements == 0 ? 'pagination-arrow limite' : 'pagination-arrow'">
                         <i class="fas fa-angle-double-right"></i>
                     </div>
                 </div>

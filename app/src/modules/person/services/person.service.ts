@@ -17,7 +17,7 @@ class PersonService {
     }
 
     getPersonListByRule(rule, page) {
-        return this.$http.get(`${this.url}/api/person/get/person-list/rule?rule=${rule}&page=${page}&size=10`)
+        return this.$http.get(`${this.url}/api/person/get/person-list/rule?rule=${rule}&page=${page}&size=1`)
     }
 
     loadById(id) {

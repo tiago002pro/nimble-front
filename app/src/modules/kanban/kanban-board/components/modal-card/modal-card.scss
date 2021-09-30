@@ -1,11 +1,27 @@
-.modal-card-teste {
-    position: absolute;
-    left: -220px;
-    .content-teste {
-        width: 1000px;
-        height: 700px;
-        margin: auto;
-        margin-top: 150px;
-        background-color: aliceblue;
+.modal-card {
+    // position: absolute;
+    // left: -220px;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    display: inline-flex;
+    background-size: contain;
+    color: #000 !important;
+    font-family: 'Roboto Condensed', sans-serif;
+    .content {
+        // width: auto;
+        // height: 40vw;
+        // margin: auto;
+        padding: 30px;
+        // position: absolute;
+        // margin-top: 50%;
+        // // margin-top: 150px;
+        // background-color: aliceblue;
+        z-index: auto;
+    }
+    .content-form {
+        // width: 50vw;
+        width: 80vw;
+        display: flex;
     }
 }
