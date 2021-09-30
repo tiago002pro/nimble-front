@@ -6,11 +6,10 @@ module.exports = {
     context: __dirname + '/../src',
     devServer: {
         port: 9000,
-     },
+    },
     entry: __dirname + '/../src/app.module.ts',
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.html$/,
                 use: [
                     { loader: 'ngtemplate-loader?relativeTo=src' },
@@ -39,15 +38,15 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-          filename: 'css/style.css',
-          allChunks: true,
+            filename: 'css/style.css',
+            allChunks: true,
         }),
         new webpack.ProvidePlugin({
-          jQuery: 'jquery',
-          $: 'jquery',
-          jquery: 'jquery'
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
         }),
-        new HtmlWebpackPlugin({template: '../index.html'}),
+        new HtmlWebpackPlugin({ template: '../index.html' }),
     ],
     resolve: {
         extensions: ['.ts', '.js'],
@@ -57,7 +56,7 @@ module.exports = {
     },
     stats: {
         children: true,
-        // logging: 'verbose',
+        logging: 'verbose',
         colors: true,
         reasons: true
     }

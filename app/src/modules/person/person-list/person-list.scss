@@ -8,48 +8,38 @@
         color: #000 !important;
         font-family: 'Roboto Condensed', sans-serif;
     }
-    
     .content-area {
         background-color: #FFF;
         padding: 50px;
         z-index: auto;
         overflow-y: auto;
     }
-
     .content-title {
         margin-bottom: 20px;
     }
-
     .new-person-button {
         float: right;
         margin-bottom: 10px;
     }
-
     .table {
         width: 80vw;
     }
-
-    .icon-edit a{
+    .icon-edit a {
         color: #343a40;
         text-align: center;
         cursor: pointer;
-
     }
-
     .icon-edit i {
         margin-left: 12px;
     }
-   
     .page-item a {
         display: inline;
         cursor: pointer;
     }
-    
     .page-link {
         border-radius: 50px !important;
         margin-left: 8px !important;
     }
-
     .pagination-item {
         width: 30px;
         height: 30px;
@@ -60,16 +50,13 @@
         background: #343a40;
         cursor: pointer;
     }
-
-    .pagination-item a {
+    .pagination-item {
         color: #fff;
         font-weight: 400;
     }
-
     .pagination-item a:hover {
         text-decoration: none;
     }
-
     .pagination-arrow {
         width: 30px;
         height: 30px;
@@ -79,8 +66,10 @@
         margin-left: 8px;
         cursor: pointer;
     }
-
     .pagination-arrow i {
         color: #343a40;
+    }
+    .limite {
+        display: none;
     }
 }

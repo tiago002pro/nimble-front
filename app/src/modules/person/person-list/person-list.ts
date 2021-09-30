@@ -13,10 +13,7 @@ class PersonListController {
     ) {}
 
     async $onInit() {
-        this.list = await this.personService.getPersonList(0).then((response) => {return response.data})
-
-        this.listPerson = this.list.content
-
+        this.getListPerson(0)
         switch(this.rule) {
             case "Clientes": 
                 this.ruleTitle = "Cliente"
@@ -30,8 +27,8 @@ class PersonListController {
 
     }
 
-    async teste(page) {
-        this.list = await this.personService.getPersonList(page).then((response) => {return response.data})
+    async getListPerson(page) {
+        this.list = await this.personService.getPersonListByRule(this.rule, page).then((response) => {return response.data})
         this.listPerson = this.list.content
     }
 
